@@ -3,6 +3,6 @@
     public class ActiveTimedAction
     {
         public TimedNodeAction CurrentAction { get; set; }
-        public string Time { get; set; }
+        public short Time { get; set; }
     }
 }
