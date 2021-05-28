@@ -1,3 +1,10 @@
-﻿@{
+﻿@model ActiveTimedAction
+
+@{
     ViewData["Title"] = "Covidiot";
 }
+
+<time>@Model.Time</time>
+<textarea>
+    @Model.CurrentAction.Description
+</textarea>
