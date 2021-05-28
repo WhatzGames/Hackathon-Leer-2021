@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Covidiot.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class GameController : ControllerBase
     {
 
