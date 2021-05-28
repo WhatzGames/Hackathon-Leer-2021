@@ -1,0 +1,52 @@
+﻿{
+  "description": "Du bist zu Hause. Es ist ein neuer Tag im Pandemiezeitalter. Corona ist im vollem Gange, die Regierung hat Maßnahmen ergriffen. Du selbst bist mitten drin. Und stehst dem ganzen mindestens skeptisch gegenüber. \nDu darfst diesen Tag in 24 Stunden gestalten, hingehen, wohin du willst, und erleben. Sei ein guter Covidiot, oder lass den gesunden Menschenverstand spielen. Deine Entscheidung.\nDu kannst jetzt ganz einfach loslegen. Geh sofort raus, oder tu etwas anderes. Viel Spaß dabei!",
+  "image": "https://m.ga-online.de/media/newsimage_pub/638489/m-big/e7b1d6f8ffa1163aece189b8af192e68",
+  "timeOfDayStart": 0,
+  "timeOfDayEnd": 24,
+  "actions": [
+    {
+      "text": "Du gehst raus und startest einfach in den Tag.",
+      "probability": 1,
+      "score": 0,
+      "duration": 0,
+      "response": "Ohne Plan wählst du nun die Richtung, in die es gehen soll.",
+      "newStart": null
+    },
+    {
+      "text": "Chatte mit Freunden und frage, was abgeht.",
+      "probability": 1,
+      "score": 0,
+      "duration": 2,
+      "response": "Du erfährst, dass es heute ein Event steigen soll. Der genaue Ort ist nicht bekannt, aber er soll nördlich liegen.",
+      "newStart": null
+    },
+    {
+      "text": "Frage deine Kollegen, wie es ihnen geht.",
+      "probability": 1,
+      "score": 0,
+      "duration": 2,
+      "response": "Dabei wirst du dran erinnert, dass einer deiner Kolleginnen heute heiraten soll. Du und deine Kollegen seid nicht offiziell eingeladen, aber ihr versteht euch und sie hätte sicher nichts dagegen, wenn du ihr persönlich gratulierst. Die Hochzeit soll im großen Gasthaus im Westen stattfinden.",
+      "newStart": null
+    }
+  ],
+  "here": {
+    "xCoordinate": 4,
+    "yCoordinate": "E"
+  },
+  "north": {
+    "xCoordinate": 4,
+    "yCoordinate": "D"
+  },
+  "east": {
+    "xCoordinate": 1,
+    "yCoordinate": "E"
+  },
+  "south": {
+    "xCoordinate": 4,
+    "yCoordinate": "A"
+  },
+  "west": {
+    "xCoordinate": 3,
+    "yCoordinate": "E"
+  }
+}
