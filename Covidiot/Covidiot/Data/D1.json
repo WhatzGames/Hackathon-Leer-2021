@@ -1,0 +1,49 @@
+{
+  "description": "Auf einer großen Blumenwiese steht anmutig ein verliebtes Hochzeitspaar und küsst sich wiederholt vor den Bilder machenden Verwandten und Bekannten.\n Von diesen Verwandten und Bekannten gibt es eien ganze Menge -  ca. 300 Personen, die sich alle auf einem sehr kleinen Teil dieser Blumenwiese drängeln. \n Du stutzt als Du das Gesicht der Braut siehst, es handelt sich ume ein Arbeitskollegin!",
+  "image": "https://m.ga-online.de/media/newsimage_pub/638489/m-big/e7b1d6f8ffa1163aece189b8af192e68",
+  "timeOfDayStart": 0,
+  "timeOfDayEnd": 24,
+  "actions": [
+    {
+      "text": "Du rennst (natürlich ohne Maske) in die Menge und umarmst jeden den Du kennst",
+      "probability": 1,
+      "score": 4,
+      "duration": 1,
+      "response": "Nach zahlreichen Umarmungen und auch Küssen ist Dein Gesicht total vollgesabbert.",
+      "newStart": null
+    },
+    {
+      "text": "Du rufst die Polizei an und berichtest von dieser unangemeldeten Versammlung verdächtiger Individuen",
+      "probability": 1,
+      "score": -3,
+      "duration": 1,
+      "response": "Die Polizei kommt und löst die Hochzeitsveranstaltung auf.\nDu erhaschst noch einen bösen Blick von Deiner Arbeitskollegin - Schätze das wird noch ein Nachspiel haben.",
+      "newStart": null
+    },
+    {
+      "text": "Du winkst einmal kurz herüber, hälst aber Abstand und gehst weiter",
+      "probability": 1,
+      "score": 0,
+      "duration": 1,
+      "response": "Sicher ist sicher, man muss ja nicht gleich das Schicksal herausfordern. ",
+      "newStart": null
+    }
+  ],
+  "here": {
+    "xCoordinate": 1,
+    "yCoordinate": "D"
+  },
+  "north": {
+    "xCoordinate": 1,
+    "yCoordinate": "C"
+  },
+  "east": {
+    "xCoordinate": 2,
+    "yCoordinate": "D"
+  },
+  "south": {
+    "xCoordinate": 1,
+    "yCoordinate": "E"
+  },
+  "west": null
+}

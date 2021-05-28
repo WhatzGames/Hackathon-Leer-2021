@@ -2,44 +2,46 @@
   "description": "Du erreichst die Haltestelle, von der aus du immer mit dem Bus zur Arbeit fährst. Du könntest heute auch dorthin fahren. Ein paar deiner Kollegen werden sicherlich auch dort sein und arbeiten. Daher entscheidest du dich auf den Bus zu warten. Als der Bus anhält und du einsteigen willst, ermahnt dich der Busfahrer, deine Maske aufzusetzen.",
   "timeOfDayStart": 0,
   "timeOfDayEnd": 24,
-  "action1": {
-    "text": "Du setzt deine Maske auf und setzt dich. Während der Fahrt behälst du sie auf.",
-    "probability": 1,
-    "score": -1,
-    "duration": 2,
-    "response": "Die Fahrt verläuft ruhig, du erreichst die Zielhaltestelle zeitig.",
-    "newStart": {
-      "xCoordinate": 1,
-      "yCoordinate": "C"
+  "actions": [
+    {
+      "text": "Du setzt deine Maske auf und setzt dich. Während der Fahrt behälst du sie auf.",
+      "probability": 1,
+      "score": -1,
+      "duration": 2,
+      "response": "Die Fahrt verläuft ruhig, du erreichst die Zielhaltestelle zeitig.",
+      "newStart": {
+        "xCoordinate": 1,
+        "yCoordinate": "C"
+      }
+    },
+    {
+      "text": "Du setzt deine Maske zunächst auf. Sobald der Bus losfährt, ziehst du sie unter die Nase.",
+      "probability": 1,
+      "score": 3,
+      "duration": 2,
+      "response": "Während der Fahrt sieht dich der Busfahrer mit deiner schlecht sitzenden Maske. Er hält an und diskutiert mit dir über die Sinnhaftigkeit der Masken, schließlich setzt du sie wieder richtig auf, du willst ja irgendwann am Ziel ankommen.",
+      "newStart": {
+        "xCoordinate": 1,
+        "yCoordinate": "C"
+      }
+    },
+    {
+      "text": "Du steigst in den Bus ein und setzt sie dann ab.",
+      "probability": 1,
+      "score": 8,
+      "duration": 7,
+      "response": "Dein Verhalten stößt dem Fahrer und Mitfahrern sehr sauer auf. Ihr diskutiert hitzig, Du willst schließlich auch nicht wieder aussteigen. Letztlich ruft der Fahrer die Polizei wegen deines Verhaltens. Da du das Bußgeld nicht bezahlen kannst, nimmt sie dich mit auf die Wache. Das kann dauern...",
+      "newStart": {
+        "xCoordinate": 1,
+        "yCoordinate": "A"
+      }
     }
-  },
-  "action2": {
-    "text": "Du setzt deine Maske zunächst auf. Sobald der Bus losfährt, ziehst du sie unter die Nase.",
-    "probability": 1,
-    "score": 3,
-    "duration": 2,
-    "response": "Während der Fahrt sieht dich der Busfahrer mit deiner schlecht sitzenden Maske. Er hält an und diskutiert mit dir über die Sinnhaftigkeit der Masken, schließlich setzt du sie wieder richtig auf, du willst ja irgendwann am Ziel ankommen.",
-    "newStart": {
-      "xCoordinate": 1,
-      "yCoordinate": "C"
-    }
-  },
-  "action3": {
-    "text": "Du steigst in den Bus ein und setzt sie dann ab.",
-    "probability": 1,
-    "score": 8,
-    "duration": 7,
-    "response": "Dein Verhalten stößt dem Fahrer und Mitfahrern sehr sauer auf. Ihr diskutiert hitzig, Du willst schließlich auch nicht wieder aussteigen. Letztlich ruft der Fahrer die Polizei wegen deines Verhaltens. Da du das Bußgeld nicht bezahlen kannst, nimmt sie dich mit auf die Wache. Das kann dauern...",
-    "newStart": {
-      "xCoordinate": 1,
-      "yCoordinate": "A"
-    }
-  },
+  ],
   "here": {
     "xCoordinate": 5,
     "yCoordinate": "D"
   },
-  "north":{
+  "north": {
     "xCoordinate": 5,
     "yCoordinate": "C"
   },
