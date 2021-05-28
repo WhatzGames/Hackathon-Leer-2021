@@ -1,0 +1,36 @@
+{
+  "description": "Du bist zu Hause. Das Wetter draussen ist erträglich (also kein Regen) und Dir fällt so langsam  die Decke auf den Kopf.\n Zeit einfach mal rauszugehen",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM34ptqau11IXhUxOvTlhS-hk_6SKyZP3wsA&usqp=CAU",
+  "timeOfDayStart": 0,
+  "timeOfDayEnd": 24,
+  "actions": [
+    {
+      "text": "Lese Die Tageszeitung",
+      "probability": 1,
+      "score": 0,
+      "duration": 0,
+      "response": "Ah! Es gibt Berichte über eine mögliche unangemeldete Demonstration von Corona Leugnern in der Stadt.",
+      "newStart": null
+    }
+  ],
+  "here": {
+    "xCoordinate": 4,
+    "yCoordinate": "D"
+  },
+  "north": {
+    "xCoordinate": 4,
+    "yCoordinate": "C"
+  },
+  "east": {
+    "xCoordinate": 5,
+    "yCoordinate": "D"
+  },
+  "south": {
+    "xCoordinate": 4,
+    "yCoordinate": "E"
+  },
+  "west": {
+    "xCoordinate": 3,
+    "yCoordinate": "D"
+  }
+}
