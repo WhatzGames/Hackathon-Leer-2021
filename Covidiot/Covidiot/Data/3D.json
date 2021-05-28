@@ -1,0 +1,52 @@
+﻿{
+  "description": "Du wunderst dich, dass nach und nach immer mehr Menschen in die selbe Richtung strömen wie du. Du entdeckst jemanden, der ein Schild in der Hand hält: \"Wir machen das nicht mehr mit!!!\" Du erinnerst dich daran, dass eine Demonstration gegen die Corona-Maßnahmen hier heute stattfinden sollte. Langsam erreicht ihr, allmählich immer dichter gedrängt, den von Polizisten abgesicherten Platz, auf dem schon eine gewisse Menschenmenge Schilder in die Höhe hält. Was machst du?",
+  "timeOfDayStart": 0,
+  "timeOfDayEnd": 24,
+  "action1": {
+    "text": "Du stürzt dich mitten in Menge und demonstrierst mit.",
+    "probability": 1,
+    "score": 10,
+    "duration": 7,
+    "response": "Dabei verhaltet ihr euch so, dass ihr gegen die Richtlinien zu Demonstration verstößt. Die Polizei will die Demo auflösen, ihr wehrt euch. Schließlich setzt die Polizei sogar Wasserwerfer ein und verhaftet einzelne, sich heftig wehrende Demonstranten. Darunter bist auch du.",
+    "newStart": {
+      "xCoordinate": 1,
+      "yCoordinate": "A"
+    }
+  },
+  "action2": {
+    "text": "Du mischt dich unter die Menge, setzt deine Maske auf und versuchst andere davon zu überzeugen, es dir gleich zu tun.",
+    "probability": 1,
+    "score": 5,
+    "duration": 3,
+    "response": "Erst weigern sich deine Mitdemonstranten, aber nachdem du ihnen erzählst, dass die Gesichtserkennung der Regierung wegen der Masken nicht so gut funktioniert, setzen sie sie hektisch auf und schauen sich paranoid nach der nächsten Kamera um. Du selbst demonstrierst friedlich weiter.",
+    "newStart": null
+  },
+  "action3": {
+    "text": "Es wird dir zu voll hier, und mit eigentlich findest du die Maßnahmen angemessen, auch wenn sie erdrückend sind.",
+    "probability": 1,
+    "score": -1,
+    "duration": 1,
+    "response": "Du schlägst eine andere Richtung ein wie die anderen Menschen. Du kommst nun wieder schneller voran. In der ferne hörst du die Polizei die Menge per Megaphon auffordern, doch bitte Masken entsprechend der Richtlinien zu nutzen...",
+    "newStart": null
+  },
+  "here": {
+    "xCoordinate": 3,
+    "yCoordinate": "D"
+  },
+  "north":{
+    "xCoordinate": 3,
+    "yCoordinate": "C"
+  },
+  "east": {
+    "xCoordinate": 4,
+    "yCoordinate": "D"
+  },
+  "south": {
+    "xCoordinate": 3,
+    "yCoordinate": "E"
+  },
+  "west": {
+    "xCoordinate": 2,
+    "yCoordinate": "D"
+  }
+}
