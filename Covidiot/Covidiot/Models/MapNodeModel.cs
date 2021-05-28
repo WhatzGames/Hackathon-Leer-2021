@@ -12,6 +12,9 @@ namespace Covidiot.Models
 
     public class TimedNodeAction
     {
+        [JsonPropertyName("image")]
+        public string Image { get; set; } = "";
+
         [JsonPropertyName("description")]
         public string Description { get; set; } = "";
         
