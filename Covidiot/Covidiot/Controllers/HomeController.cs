@@ -14,22 +14,22 @@ namespace Covidiot.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly ActiveTimedAction _currentState;
+        private readonly ActiveTimedAction _action;
 
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            _currentState = new ActiveTimedAction
+            var coords = new MapNodeCoordinate {XCoordinate = 3, YCoordinate = 'D'};
+            _action = new ActiveTimedAction
             {
-                CurrentAction = JsonReadService.ReadAction(new MapNodeCoordinate{XCoordinate = 4, YCoordinate = 'D'}).GetAwaiter().GetResult()
+                Time = 24,
+                CurrentTimedAction = JsonReadService.ReadAction(coords).GetAwaiter().GetResult()
             };
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            _currentState.CurrentAction = await JsonReadService.ReadAction(_currentState.CurrentAction.Here);
-           
-            return View(_currentState);
+            return View(_action);
         }
 
         public IActionResult ScoreBoard()

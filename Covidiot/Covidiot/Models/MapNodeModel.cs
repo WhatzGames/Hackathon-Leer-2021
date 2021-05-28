@@ -57,7 +57,7 @@ namespace Covidiot.Models
         public int Score { get; set; } = 0;
 
         [JsonPropertyName("duration")]
-        public int Duration { get; set; } = 1;
+        public short Duration { get; set; } = 1;
 
         [JsonPropertyName("response")]
         public string Response { get; set; } = "";
