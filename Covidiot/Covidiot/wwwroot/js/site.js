@@ -167,7 +167,7 @@ async function selectOption(option, index) {
         console.log("End");
     }
     
-    await postData(index);
+    data = await postData(index);
 }
 
 async function postData(index){
@@ -203,6 +203,7 @@ function showOption(option) {
 
 async function walkOption(data){
     await post('/api/controller/Game/Walk', data);
+    showTextNode(data);
 }
 
 function uuidv4() {
