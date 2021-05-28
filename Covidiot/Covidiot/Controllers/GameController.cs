@@ -31,7 +31,7 @@ namespace Covidiot.Controllers
                 return Sessions[guid];
             var activeTimedAction = new ActiveTimedAction
             {
-                CurrentTimedAction = JsonReadService.ReadAction(new MapNodeCoordinate{XCoordinate = 3, YCoordinate = 'A'}).GetAwaiter().GetResult(),
+                CurrentTimedAction = JsonReadService.ReadAction(new MapNodeCoordinate{XCoordinate = 4, YCoordinate = 'E'}).GetAwaiter().GetResult(),
             };
             return Sessions[guid] = new Executor(activeTimedAction);
         }
