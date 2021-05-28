@@ -167,16 +167,13 @@ async function selectOption(option, index) {
         console.log("End");
     }
     
-    data = await postData(index);
+    await postData(index);
 }
 
 async function postData(index){
     await post('/api/controller/Game/Do', index)
         .catch(error => console.log("Something went wrong"));
     console.log(id);
-    return await post('/api/controller/Game/GetTimedAction', id)
-        .then(response => response.json())
-        .catch(error => console.log("Something went wrong"));
 }
 
 async function post(url, data){
@@ -203,6 +200,11 @@ function showOption(option) {
 
 async function walkOption(data){
     await post('/api/controller/Game/Walk', data);
+    
+    data =  await post('/api/controller/Game/GetTimedAction', id)
+        .then(response => response.json())
+        .catch(error => console.log("Something went wrong"));
+    
     showTextNode(data);
 }
 
