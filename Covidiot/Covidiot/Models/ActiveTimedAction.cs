@@ -2,7 +2,8 @@
 {
     public class ActiveTimedAction
     {
-        public TimedNodeAction CurrentAction { get; set; }
+        public TimedNodeAction CurrentTimedAction { get; set; }
         public short Time { get; set; }
+        public int TotalScore { get; set; }
     }
 }
