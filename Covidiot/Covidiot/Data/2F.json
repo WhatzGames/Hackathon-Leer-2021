@@ -1,0 +1,46 @@
+﻿{
+  "description": "Du schlenderst die Straße entlang, bis deine Aufmerksamkeit durch den süßen Duft von Honig auf das Gebäude gegenüber gelenkt wird. Du siehst den örtlichen Biomarkt, vor dem heute ein Stand steht, der \"natürliche Bienenprodukte\" verkauft. Ein freundlich aussehender Herr mit Rauschebart winkt dich heran. \"Hallööchen! Kennen Sie schon diese Honigkerzen! Ich verrate Ihnen was!\" Er beugt sich verschwörerisch vor. \"Diese Kerzen sind ganz besonders! Ich habe Reste des Impfstoffes beigemischt, die ich beim Impfzentrum gefunden habe!\" Er zwinkert dir zu. \"Das Feuer dieser Kerze wirkt also homöopathisch sowohl gegen das Virus, als auch gegen Impfnebenwirkungen. Eine Kerze für 10, drei für 20 Euro! Ein Schnäppchen Sie mich fragen.\" sagte er breit grinsend. Was machst du?",
+  "timeOfDayStart": 0,
+  "timeOfDayEnd": 24,
+  "action1": {
+    "text": "Du kaufst das 3er-Pack.",
+    "probability": 1,
+    "score": 5,
+    "duration": 2,
+    "response": "Du stellst noch ein paar Fragen, entscheidest dich aber letzten Endes dafür, das 3er-Paket zu kaufen und stolzierst froher Natur mit deiner Errungenschaft weiter.",
+    "newStart": null
+  },
+  "action2": {
+    "text": "Du kaufst eine Kerze",
+    "probability": 1,
+    "score": 3,
+    "duration": 1,
+    "response": "Du kaufst diesem netten und Mann eine Kerze ab. Wir haben es schließlich gerade alle Schwierig in dieser Zeit.",
+    "newStart": null
+  },
+  "action3": {
+    "text": "Du rufst du Polizei.",
+    "probability": 1,
+    "score": -3,
+    "duration": 1,
+    "response": "Dir ist das nicht geheuer. Der Impfstoff ist hier offensichtlich zweckentfremdet und vielleicht sogar gestohlen worden. Du verabschiedest dich von dem Herrn, biegst um die Ecke und benachrichtigst die Polizei.",
+    "newStart": null
+  },
+  "here": {
+    "xCoordinate": 2,
+    "yCoordinate": "F"
+  },
+  "north":{
+    "xCoordinate": 2,
+    "yCoordinate": "E"
+  },
+  "east": {
+    "xCoordinate": 3,
+    "yCoordinate": "F"
+  },
+  "south": null,
+  "west": {
+    "xCoordinate": 1,
+    "yCoordinate": "F"
+  }
+}
