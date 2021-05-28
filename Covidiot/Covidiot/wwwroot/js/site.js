@@ -3,6 +3,8 @@ const scoreElement = document.getElementById('score');
 const timeElement = document.getElementById('time');
 const optionButtonsElement = document.getElementById('option-buttons');
 const directionButtonsElement = document.getElementById('direction-buttons');
+const imageElement = document.getElementById('image');
+const responseElement = document.getElementById('response');
 
 let score = 0;
 let duration = 24;
@@ -20,9 +22,11 @@ async function startGame() {
 
 function showTextNode(gameData) {
     const textNode = gameData;
+    responseElement.innerText = null;
     textElement.innerText = textNode.description;
     scoreElement.innerText = score.toString() + " Score";
     timeElement.innerText = duration.toString() + " Stunden verbleibend";
+    imageElement.src = gameData.image;
     
     while (optionButtonsElement.firstChild) {
         optionButtonsElement.removeChild(optionButtonsElement.firstChild)
@@ -67,7 +71,8 @@ async function selectOption(option, index) {
 
     score = score + option.score;
     duration = duration - option.duration;
-
+    responseElement.innerText = option.response;
+    
     if(duration === 0){
         console.log("End");
     }
