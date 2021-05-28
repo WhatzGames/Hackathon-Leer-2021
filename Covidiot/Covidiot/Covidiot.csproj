@@ -5,6 +5,9 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Content Update="Data\1A.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
       <Content Update="Data\3A.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
