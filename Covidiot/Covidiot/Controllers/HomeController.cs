@@ -25,7 +25,12 @@ namespace Covidiot.Controllers
            
             return View(_currentState);
         }
-        
+
+        public IActionResult ScoreBoard()
+        {
+            return View();
+        }
+
         public IActionResult Effect()
         {
             return View();

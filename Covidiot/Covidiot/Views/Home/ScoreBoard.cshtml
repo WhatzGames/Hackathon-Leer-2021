@@ -1,30 +1,26 @@
-﻿@model IEnumerable<ScoreBoardModel>
+﻿@inject Covidiot.Services.ScoreboardService _scoreboardService;
 @{
     ViewData["Title"] = "Covidiot";
 }
 
-<table>
-    <thead>
-    <tr>
-        <th>
-            Player
-        </th>
-        <th>
-            Score
-        </th>
-    </tr>
-    </thead>
-    <tbody>
-    @foreach (var entry in Model)
-    {
-        <tr>
-            <td>
-                @entry.Name
-            </td>
-            <td>
-                @entry.Score
-            </td>
-        </tr>
-    }
-    </tbody>
-</table>
+<head>
+    <link rel="stylesheet" href="~/css/ScoreBoard.css"/>
+    <title>Scoreboard</title>
+</head>
+
+<div class="container">
+  <h2>Scoreboard Covidiot</h2>
+  <ul class="responsive-table">
+    <li class="table-header">
+      <div class="col col-1">Name </div>
+      <div class="col col-2">Score</div>
+    </li>
+        @foreach (var entry in await _scoreboardService.GetTop10())
+        {
+            <li class="table-row">
+                <div class="col col-1" data-label="Name">@entry.Name</div>
+                <div class="col col-2" data-label="Score">@entry.Score</div>
+            </li>
+        }
+  </ul>
+</div>
