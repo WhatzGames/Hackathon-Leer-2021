@@ -1,31 +1,48 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
+using System.Threading.Tasks;
 using Covidiot.Models;
 using Covidiot.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Covidiot.Controllers
 {
+    [Route("api/[controller]")]
     public class GameController : ControllerBase
     {
+
+        private static readonly IDictionary<string, Executor> Sessions;
+
+        static GameController()
+        {
+            Sessions = new Dictionary<string, Executor>();
+        }
+        
         private readonly ScoreboardService _scoreboardService;
-        private readonly Executor _executor;
         public GameController(ScoreboardService scoreboardService)
         {
             _scoreboardService = scoreboardService;
+        }
+
+        private static Executor GetExecutor(string guid)
+        {
+            if (Sessions.ContainsKey(guid))
+                return Sessions[guid];
             var activeTimedAction = new ActiveTimedAction
             {
-                CurrentTimedAction = JsonReadService.ReadAction(new MapNodeCoordinate{XCoordinate = 3, YCoordinate = 'A'}).GetAwaiter().GetResult(),
+                CurrentTimedAction = JsonReadService.ReadAction(new MapNodeCoordinate{XCoordinate = 4, YCoordinate = 'E'}).GetAwaiter().GetResult(),
             };
-            _executor = new Executor(activeTimedAction);
+            return Sessions[guid] = new Executor(activeTimedAction);
         }
 
-        public TimedNodeAction GetTimedAction()
-        {
-            return _executor.NodeAction;
-        }
+        [HttpGet("timedaction")]
+        public TimedNodeAction GetTimedAction(string guid) => GetExecutor(guid).NodeAction;
 
-        public Task Walk(Direction direction) => _executor.Walk(direction);
-
-        public void Do(ushort action) => _executor.Do(action);
+        [HttpGet("walk")]
+        public Task Walk(string guid, Direction direction) => GetExecutor(guid).Walk(direction);
+        
+        [HttpGet("do")]
+        public void Do(string guid, ushort action) => GetExecutor(guid).Do(action);
     }
 }
