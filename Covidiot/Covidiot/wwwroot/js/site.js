@@ -173,7 +173,6 @@ async function selectOption(option, index) {
 async function postData(index){
     await post('/api/controller/Game/Do', index)
         .catch(error => console.log("Something went wrong"));
-    console.log(id);
 }
 
 async function post(url, data){
@@ -182,15 +181,7 @@ async function post(url, data){
         mode: "same-origin",
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: data
-    })
-}
-
-async function get(url){
-    await fetch(url, {
-        credentials: "same-origin",
-        mode: "same-origin",
-        method: "GET"
+        body: id, data
     })
 }
 
