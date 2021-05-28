@@ -1,32 +1,51 @@
 ﻿{
-  "description": "Du bist zu Hause. Es ist ein neuer Tag im Pandemiezeitalter. Corona ist im vollem Gange, die Regierung hat Maßnahmen ergriffen. Du selbst bist mitten drin. Und stehst dem ganzen mindestens skeptisch gegenüber. \nDu darfst diesen Tag in 24 Stunden gestalten, hingehen, wohin du willst, und erleben. Sei ein guter Covidiot, oder lass den gesunden Menschenverstand spielen. Deine Entscheidung.\nDu kannst jetzt ganz einfach loslegen. Geh sofort raus, oder tu etwas anderes. Viel Spaß dabei!",
-  "image": "https://m.ga-online.de/media/newsimage_pub/638489/m-big/e7b1d6f8ffa1163aece189b8af192e68",
+  "description": "Du erreichst die Haltestelle, von der aus du immer mit dem Bus zur Arbeit fährst. Du könntest heute auch dorthin fahren. Ein paar deiner Kollegen werden sicherlich auch dort sein und arbeiten. Daher entscheidest du dich auf den Bus zu warten. Als der Bus anhält und du einsteigen willst, ermahnt dich der Busfahrer, deine Maske aufzusetzen.",
   "timeOfDayStart": 0,
   "timeOfDayEnd": 24,
   "actions": [
     {
-      "text": "Du gehst raus und startest einfach in den Tag.",
+      "text": "Du setzt deine Maske auf und setzt dich. Während der Fahrt behälst du sie auf.",
       "probability": 1,
-      "score": 0,
-      "duration": 0,
-      "response": "Ohne Plan wählst du nun die Richtung, in die es gehen soll.",
-      "newStart": null
+      "score": -1,
+      "duration": 2,
+      "response": "Die Fahrt verläuft ruhig, du erreichst die Zielhaltestelle zeitig.",
+      "newStart": {
+        "xCoordinate": 1,
+        "yCoordinate": "C"
+      }
     },
     {
-      "text": "Chatte mit Freunden und frage, was abgeht.",
+      "text": "Du setzt deine Maske zunächst auf. Sobald der Bus losfährt, ziehst du sie unter die Nase.",
       "probability": 1,
-      "score": 0,
-      "duration": 2,
-      "response": "Du erfährst, dass es heute ein Event steigen soll. Der genaue Ort ist nicht bekannt, aber er soll nördlich liegen.",
-      "newStart": null
+      "score": 3,
+      "duration": 3,
+      "response": "Während der Fahrt sieht dich der Busfahrer mit deiner schlecht sitzenden Maske. Er hält an und diskutiert mit dir über die Sinnhaftigkeit der Masken, schließlich setzt du sie wieder richtig auf, du willst ja irgendwann am Ziel ankommen.",
+      "newStart": {
+        "xCoordinate": 1,
+        "yCoordinate": "C"
+      }
     },
     {
-      "text": "Frage deine Kollegen, wie es ihnen geht.",
+      "text": "Du steigst in den Bus ein und setzt sie dann ab.",
+      "probability": 1,
+      "score": 8,
+      "duration": 7,
+      "response": "Dein Verhalten stößt dem Fahrer und Mitfahrern sehr sauer auf. Ihr diskutiert hitzig, Du willst schließlich auch nicht wieder aussteigen. Letztlich ruft der Fahrer die Polizei wegen deines Verhaltens. Da du das Bußgeld nicht bezahlen kannst, nimmt sie dich mit auf die Wache. Das kann dauern...",
+      "newStart": {
+        "xCoordinate": 1,
+        "yCoordinate": "A"
+      }
+    },
+    {
+      "text": "Du wartest doch nicht, sondern gehst einfach weiter",
       "probability": 1,
       "score": 0,
-      "duration": 2,
-      "response": "Dabei wirst du dran erinnert, dass einer deiner Kolleginnen heute heiraten soll. Du und deine Kollegen seid nicht offiziell eingeladen, aber ihr versteht euch und sie hätte sicher nichts dagegen, wenn du ihr persönlich gratulierst. Die Hochzeit soll im großen Gasthaus im Westen stattfinden.",
-      "newStart": null
+      "duration": 1,
+      "response": "Du siehst den Bus an dir vorbeifahren-",
+      "newStart": {
+        "xCoordinate": 1,
+        "yCoordinate": "A"
+      }
     }
   ],
   "here": {
@@ -37,9 +56,9 @@
     "xCoordinate": 4,
     "yCoordinate": "C"
   },
-  "east": {
-    "xCoordinate": 5,
-    "yCoordinate": "C"
+  "east":  {
+    "xCoordinate": 1,
+    "yCoordinate": "D"
   },
   "south": {
     "xCoordinate": 4,
