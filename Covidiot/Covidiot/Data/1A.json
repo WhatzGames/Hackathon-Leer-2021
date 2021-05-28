@@ -1,0 +1,44 @@
+{
+	"description": "Hier ist die Polizei. Ausser den dienstleistenden Beamten ist kein Mensch zu sehen.",
+	"image": "https://m.ga-online.de/media/newsimage_pub/638489/m-big/e7b1d6f8ffa1163aece189b8af192e68",
+	"timeOfDayStart": 0,
+	"timeOfDayEnd": 24,
+	"action1": {
+		"text": "Laufe um das Gebäude",
+		"probability": 1,
+		"score": 0,
+		"duration": 1,
+		"response": "Das war anstrengender als gedacht und auch ziemlich langweilig.",
+		"newStart": null
+	},
+	"action2": {
+		"text": "Gehe hinein, drehe wieder um und gehe hinaus.",
+		"probability": 1,
+		"score": 0,
+		"duration": 1,
+		"response": "Wegen frisch desinfizierten Türgriffen ist das Corona Infektionsrisiko nicht wesentlcih gestiegen.",
+		"newStart": null
+	},
+	"action3": {
+		"text": "Rede kurz mit dem diensthebenden Beamten über das Wetter und die aktuelle Situation vor Ort",
+		"probability": 1,
+		"score": 0,
+		"duration": 1,
+		"response": "Da Ihr über eine Glasscheibe voneinander getrennt wart ist Corona-technisch nichts passsiert",
+		"newStart": null
+	},
+	"here": {
+		"xCoordinate": 3,
+		"yCoordinate": "A"
+	},
+	"north": null,
+	"east": {
+		"xCoordinate": 2,
+		"yCoordinate": "A"
+	},
+	"south": {
+		"xCoordinate": 1,
+		"yCoordinate": "B"
+	},
+	"west": null
+}
