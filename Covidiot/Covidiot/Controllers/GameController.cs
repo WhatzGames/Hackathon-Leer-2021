@@ -39,10 +39,10 @@ namespace Covidiot.Controllers
         [HttpGet("timedaction")]
         public TimedNodeAction GetTimedAction(string guid) => GetExecutor(guid).NodeAction;
 
-        [HttpGet("walk/{guid}")]
+        [HttpGet("walk")]
         public Task Walk(string guid, Direction direction) => GetExecutor(guid).Walk(direction);
         
-        [HttpGet("do/{guid}")]
+        [HttpGet("do")]
         public void Do(string guid, ushort action) => GetExecutor(guid).Do(action);
     }
 }
