@@ -1,6 +1,6 @@
 ﻿@inject Covidiot.Services.ScoreboardService _scoreboardService;
 @{
-    ViewData["Title"] = "Covidiot";
+    ViewData["Title"] = "Scoreboard";
 }
 
 <head>
@@ -9,7 +9,7 @@
 </head>
 
 <div class="container">
-  <h2>Scoreboard Covidiot</h2>
+  <h2>Scoreboard</h2>
   <ul class="responsive-table">
     <li class="table-header">
       <div class="col col-1">Name </div>
@@ -19,7 +19,7 @@
         {
             <li class="table-row">
                 <div class="col col-1" data-label="Name">@entry.Name</div>
-                <div class="col col-2" data-label="Score">@entry.Score</div>
+                <div class="col col-2" data-label="Score">@entry.Score Punkte</div>
             </li>
         }
   </ul>
