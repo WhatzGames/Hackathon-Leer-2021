@@ -1,5 +1,6 @@
 {
 	"description": "Wow! Überall strömen Menschen auf dem Gelände in ein etwas schäbig anmutendes Gebäude, das von vielen bunten Lichtern erleuchtet wird. <br/> In grellen Farbtönen ist RAVE PARTY hastig über die Eingangstür gesprüht worden.\n Es scheint sich um eine illegale Corona Party zu handeln!",
+	"image": "https://static.euronews.com/articles/stories/05/24/39/04/1440x810_cmsv2_938f624b-3edb-5d12-8f38-f6e39037e4f2-5243904.jpg",
 	"timeOfDayStart": 0,
 	"timeOfDayEnd": 24,
 	"action1": {
@@ -36,7 +37,7 @@
 		"yCoordinate": "A"
 	},
 	"south": {
-		"xCoordinate": 1,
+		"xCoordinate": 3,
 		"yCoordinate": "B"
 	},
 	"west": {
