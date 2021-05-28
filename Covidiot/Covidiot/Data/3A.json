@@ -33,9 +33,12 @@
     "xCoordinate": 3,
     "yCoordinate": "A"
   },
-  "north": null,
+  "north": {
+    "xCoordinate": 3,
+    "yCoordinate": "D"
+  },
   "east": {
-    "xCoordinate": 4,
+    "xCoordinate": 1,
     "yCoordinate": "A"
   },
   "south": {
@@ -43,7 +46,7 @@
     "yCoordinate": "B"
   },
   "west": {
-    "xCoordinate": 2,
+    "xCoordinate": 1,
     "yCoordinate": "A"
   }
 }
