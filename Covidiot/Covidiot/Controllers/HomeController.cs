@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -16,12 +19,15 @@ namespace Covidiot.Controllers
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            _currentState = new ActiveTimedAction();
+            _currentState = new ActiveTimedAction
+            {
+                CurrentAction = JsonReadService.ReadAction(new MapNodeCoordinate{XCoordinate = 4, YCoordinate = 'D'}).GetAwaiter().GetResult()
+            };
         }
 
         public async Task<IActionResult> Index()
         {
-            _currentState.CurrentAction = await JsonReadService.ReadAction("3A");
+            _currentState.CurrentAction = await JsonReadService.ReadAction(_currentState.CurrentAction.Here);
            
             return View(_currentState);
         }

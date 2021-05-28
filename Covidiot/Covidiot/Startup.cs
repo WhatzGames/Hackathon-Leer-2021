@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
@@ -13,6 +14,12 @@ namespace Covidiot
 {
     public class Startup
     {
+        public static readonly string DataDirectory;
+        static Startup()
+        {
+            DataDirectory = Path.Join(Environment.CurrentDirectory, "Data");
+        }
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;

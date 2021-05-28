@@ -8,15 +8,11 @@ namespace Covidiot.Services
 {
     public static class JsonReadService
     {
-        private static readonly string Directory;
-        static JsonReadService()
+        public static Task<TimedNodeAction> ReadAction(MapNodeCoordinate coordinate) =>
+            ReadAction($"{coordinate.XCoordinate}{coordinate.YCoordinate}");
+        private static async Task<TimedNodeAction> ReadAction(string tileCoordinate)
         {
-            Directory = Path.Join(Environment.CurrentDirectory, "Data");
-        }
-        
-        public static async Task<TimedNodeAction> ReadAction(string filename)
-        {
-            var location = Path.Join(Directory, $"{filename}.json");
+            var location = Path.Join(Startup.DataDirectory, $"{tileCoordinate}.json");
             var reader = File.Open(location, FileMode.Open, FileAccess.Read);
             var model = await JsonSerializer.DeserializeAsync<TimedNodeAction>(reader);
             reader.Close();
