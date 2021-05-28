@@ -35,18 +35,18 @@
   },
   "north": {
     "xCoordinate": 1,
-    "yCoordinate": "E"
+    "yCoordinate": "D"
   },
   "east": {
-    "xCoordinate": 2,
+    "xCoordinate": 3,
     "yCoordinate": "A"
   },
   "south": {
     "xCoordinate": 1,
-    "yCoordinate": "B"
+    "yCoordinate": "C"
   },
   "west": {
-    "xCoordinate": 4,
+    "xCoordinate": 3,
     "yCoordinate": "A"
   }
 }
