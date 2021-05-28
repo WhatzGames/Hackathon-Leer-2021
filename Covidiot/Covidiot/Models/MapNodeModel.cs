@@ -1,74 +1,79 @@
-﻿using System.Text.Json.Serialization;
+﻿using System;
+using System.Text.Json.Serialization;
 
 namespace Covidiot.Models
 {
+
     public class MapNodeModel
     {
         private TimedNodeAction[] Actions { get; set; }
     }
 
+
     public class TimedNodeAction
     {
         [JsonPropertyName("description")]
-        public string Description { get; set; }
+        public string Description { get; set; } = "";
         
         [JsonPropertyName("timeOfDayStart")]
-        public int TimeOfDayStart { get; set; }
-        
+        public int TimeOfDayStart { get; set; } = 0;
+
         [JsonPropertyName("timeOfDayEnd")]
-        public int TimeOfDayEnd { get; set; }
+        public int TimeOfDayEnd { get; set; } = 24;
         
 
         [JsonPropertyName("action1")]
-        public Action Action1  { get; set; }
-        
+        public Action Action1 { get; set; } = new Action();
+
         [JsonPropertyName("action2")]
-        public Action Action2  { get; set; }
-        
+        public Action Action2 { get; set; } = new Action();
+
         [JsonPropertyName("action3")]
-        public Action Action3  { get; set; }
-        
-        
+        public Action Action3 { get; set; } = new Action();
+
         [JsonPropertyName("here")]
-        public MapNodeCoordinate Here { get; set; }
+        public MapNodeCoordinate Here { get; set; } = new MapNodeCoordinate();
         
         [JsonPropertyName("north")]
-        public MapNodeCoordinate North { get; set; }
+        public MapNodeCoordinate North { get; set; } = new MapNodeCoordinate();
 
         [JsonPropertyName("east")]
-        public MapNodeCoordinate East { get; set; }
-        
+        public MapNodeCoordinate East { get; set; } = new MapNodeCoordinate();
+
         [JsonPropertyName("south")]
-        public MapNodeCoordinate South { get; set; }
-        
+        public MapNodeCoordinate South { get; set; } = new MapNodeCoordinate();
+
         [JsonPropertyName("west")]
-        public MapNodeCoordinate West { get; set; }
+        public MapNodeCoordinate West { get; set; } = new MapNodeCoordinate();
     }
 
     public class Action
     {
         [JsonPropertyName("text")]
-        public string Text { get; set; }
-        
-        [JsonPropertyName("probability")]
-        public decimal Probability { get; set; }
-        
-        [JsonPropertyName("score")]
-        public int Score { get; set; }
-        
-        [JsonPropertyName("response")]
-        public string Response { get; set; }
-        
-        [JsonPropertyName("newStart")]
-        public MapNodeCoordinate NewStart { get; set; }
-    }
+        public string Text { get; set; } = "";
 
+        [JsonPropertyName("probability")]
+        public decimal Probability { get; set; } = 1m;
+
+        [JsonPropertyName("score")]
+        public int Score { get; set; } = 0;
+
+        [JsonPropertyName("duration")]
+        public int Duration { get; set; } = 1;
+
+        [JsonPropertyName("response")]
+        public string Response { get; set; } = "";
+
+        [JsonPropertyName("newStart")]
+        public MapNodeCoordinate NewStart { get; set; } = null;
+    }
+    [Serializable]
     public class MapNodeCoordinate
     {
         [JsonPropertyName("xCoordinate")]
-        public int XCoordinate { get; set; }
-        
+        public int XCoordinate { get; set; } = 1;
+
         [JsonPropertyName("yCoordinate")]
-        public char YCoordinate { get; set; }
+        public char YCoordinate { get; set; } = 'A';
     }
 }

@@ -1,0 +1,46 @@
+{
+	"description": "Wow! Überall strömen Menschen auf dem Gelände in ein etwas schäbig anmutendes Gebäude, das von vielen bunten Lichtern erleuchtet wird. <br/> In grellen Farbtönen ist RAVE PARTY hastig über die Eingangstür gesprüht worden.\n Es scheint sich um eine illegale Corona Party zu handeln!",
+	"timeOfDayStart": 0,
+	"timeOfDayEnd": 24,
+	"action1": {
+		"text": "Rufe per Handy die Polizei an. ",
+		"probability": 1,
+		"score": -3,
+		"duration": 1,
+		"response": "Du weißt Du hast das richtige getan.",
+		"newStart": null
+	},
+	"action2": {
+		"text": "Nehme die Maske ab und auf ins Getümmel. Erstmal tanzen und Freunde treffen..",
+		"probability": 1,
+		"score": 10,
+		"duration": 7,
+		"response": "Nach 7 Stunden hat Du alles gegeben und viele Freunde kennengelernt und umarmt. Viele haben sogar gehustet!",
+		"newStart": null
+	},
+	"action3": {
+		"text": "Rede kurz mit einem Bekannten in der Raucherecke aber halte Abstand und die Maske auf.",
+		"probability": 1,
+		"score": 1,
+		"duration": 1,
+		"response": "Nach ein paar Minuten passiv rauchen geht es Dir schon viel schlechter, aber wenigsten ist das Corona Risiko minimiert..",
+		"newStart": null
+	},
+	"here": {
+		"xCoordinate": 3,
+		"yCoordinate": "A"
+	},
+	"north": null,
+	"east": {
+		"xCoordinate": 4,
+		"yCoordinate": "A"
+	},
+	"south": {
+		"xCoordinate": 1,
+		"yCoordinate": "B"
+	},
+	"west": {
+		"xCoordinate": 2,
+		"yCoordinate": "A"
+	}
+}
