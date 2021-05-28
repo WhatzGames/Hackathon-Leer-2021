@@ -37,5 +37,8 @@
     "xCoordinate": 1,
     "yCoordinate": "D"
   },
-  "west": null
+  "west": {
+    "xCoordinate": 4,
+    "yCoordinate": "C"
+  }
 }

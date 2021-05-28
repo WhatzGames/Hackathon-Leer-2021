@@ -45,5 +45,8 @@
     "xCoordinate": 1,
     "yCoordinate": "E"
   },
-  "west": null
+  "west": {
+    "xCoordinate": 4,
+    "yCoordinate": "D"
+  }
 }
