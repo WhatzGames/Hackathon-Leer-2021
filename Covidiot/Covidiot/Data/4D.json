@@ -1,5 +1,6 @@
 ﻿{
   "description": "Du erreichst die Haltestelle, von der aus du immer mit dem Bus zur Arbeit fährst. Du könntest heute auch dorthin fahren. Ein paar deiner Kollegen werden sicherlich auch dort sein und arbeiten. Daher entscheidest du dich auf den Bus zu warten. Als der Bus anhält und du einsteigen willst, ermahnt dich der Busfahrer, deine Maske aufzusetzen.",
+  "image": "https://m.oz-online.de/media/newsimage_pub/1050085/m-big/06f228b9744386a256d93e3ed13865b5",
   "timeOfDayStart": 0,
   "timeOfDayEnd": 24,
   "actions": [

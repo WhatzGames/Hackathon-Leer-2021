@@ -38,15 +38,15 @@
     "yCoordinate": "D"
   },
   "east": {
-    "xCoordinate": 3,
+    "xCoordinate": 4,
     "yCoordinate": "E"
   },
   "south": {
     "xCoordinate": 2,
-    "yCoordinate": "A"
+    "yCoordinate": "B"
   },
   "west": {
-    "xCoordinate": 1,
+    "xCoordinate": 4,
     "yCoordinate": "E"
   }
 }

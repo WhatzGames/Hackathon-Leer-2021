@@ -27,10 +27,10 @@
   },
   "north": {
     "xCoordinate": 1,
-    "yCoordinate": "B"
+    "yCoordinate": "A"
   },
   "east": {
-    "xCoordinate": 2,
+    "xCoordinate": 3,
     "yCoordinate": "C"
   },
   "south": {
