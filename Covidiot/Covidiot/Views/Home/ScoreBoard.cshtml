@@ -1,4 +1,30 @@
-﻿
+﻿@model IEnumerable<ScoreBoardModel>
 @{
     ViewData["Title"] = "Covidiot";
 }
+
+<table>
+    <thead>
+    <tr>
+        <th>
+            Player
+        </th>
+        <th>
+            Score
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var entry in Model)
+    {
+        <tr>
+            <td>
+                @entry.Name
+            </td>
+            <td>
+                @entry.Score
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
