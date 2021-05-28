@@ -30,20 +30,23 @@
     }
   ],
   "here": {
-    "xCoordinate": 5,
-    "yCoordinate": "C"
-  },
-  "north": {
-    "xCoordinate": 5,
+    "xCoordinate": 4,
     "yCoordinate": "B"
   },
+  "north": {
+    "xCoordinate": 4,
+    "yCoordinate": "E"
+  },
   "east": {
+    "xCoordinate": 1,
+    "yCoordinate": "B"
+  },
+  "south": {
     "xCoordinate": 4,
     "yCoordinate": "C"
   },
-  "south": {
-    "xCoordinate": 5,
-    "yCoordinate": "D"
-  },
-  "west": null
+  "west": {
+    "xCoordinate": 3,
+    "yCoordinate": "B"
+  }
 }
