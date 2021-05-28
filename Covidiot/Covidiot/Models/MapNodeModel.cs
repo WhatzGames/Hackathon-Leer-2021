@@ -2,6 +2,11 @@
 {
     public class MapNodeModel
     {
+        private TimedNodeAction[] Actions { get; set; }
+    }
+
+    public class TimedNodeAction
+    {
         public string Description { get; set; }
         public int TimeOfDayStart { get; set; }
         public int TimeOfDayEnd { get; set; }
