@@ -1,0 +1,13 @@
+﻿{
+  "Players": 
+  [
+    {
+      "Name": "Test",
+      "Score": 1000
+    },
+    {
+      "Name": "Test2",
+      "Score": 1200
+    }
+  ]
+}
