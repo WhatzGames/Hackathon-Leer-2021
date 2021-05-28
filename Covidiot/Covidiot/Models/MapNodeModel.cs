@@ -23,16 +23,11 @@ namespace Covidiot.Models
 
         [JsonPropertyName("timeOfDayEnd")]
         public int TimeOfDayEnd { get; set; } = 24;
-        
 
-        [JsonPropertyName("action1")]
-        public Action Action1 { get; set; } = new Action();
 
-        [JsonPropertyName("action2")]
-        public Action Action2 { get; set; } = new Action();
+        [JsonPropertyName("actions")]
+        public Action[] Actions { get; set; } = new Action[] { };
 
-        [JsonPropertyName("action3")]
-        public Action Action3 { get; set; } = new Action();
 
         [JsonPropertyName("here")]
         public MapNodeCoordinate Here { get; set; } = new MapNodeCoordinate();
@@ -70,6 +65,7 @@ namespace Covidiot.Models
         [JsonPropertyName("newStart")]
         public MapNodeCoordinate NewStart { get; set; } = null;
     }
+    
     [Serializable]
     public class MapNodeCoordinate
     {

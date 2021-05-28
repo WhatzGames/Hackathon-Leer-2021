@@ -1,50 +1,52 @@
 {
-	"description": "Das Impfzentrum! Ein Ort der Hoffnung!",
-	"image": "https://www.ndr.de/nachrichten/hamburg/impfzentrum220_v-contentxl.jpg",
-	"timeOfDayStart": 0,
-	"timeOfDayEnd": 24,
-	"action1": {
-		"text": "Schon lange hast du auf deinen Termin gewartet, heute ist es endlich so weit: Lass dich impfen!",
-		"probability": 1,
-		"score": -10,
-		"duration": 1,
-		"response": "One step closer to Herdenimmunität!",
-		"newStart": null
-	},
-	"action2": {
-		"text": "Versuch dich ins Impfzentrum zu schleichen, vielleicht kannst du ja ein paar Dosen Impfstoff stehlen.",
-		"probability": 1,
-		"score": -10,
-		"duration": 1,
-		"response": "Du schleichst dich erfolgreich ins Impfzentrum! Du schlenderst in ein Behandlungszimmer, um nach Impfstoff zu suchen. /n Doch ehe du dich versiehst, hast du eine Spritze im Arm. Die Ärztin lächelt dich freundlich an, aber du merkst schon, wie du langsam Autism und 5G bekommst.",
-		"newStart": null
-	},
-	"action3": {
-		"text": "Versuche die Leute, die ins Impfzentrum wollen, zu überzeugen wieder zu gehen.",
-		"probability": 1,
-		"score": 2,
-		"duration": 3,
-		"response": "Irgendwie will keiner auf dich hören. Mehrere Leute haben dir sogar einen Vogel gezeigt!",
-		"newStart": null
-	},
-	"here": {
-		"xCoordinate": 4,
-		"yCoordinate": "C"
-	},
-	"north": {
-		"xCoordinate": 4,
-		"yCoordinate": "B"
-	},
-	"east": {
-		"xCoordinate": 5,
-		"yCoordinate": "C"
-	},
-	"south": {
-		"xCoordinate": 4,
-		"yCoordinate": "D"
-	},
-	"west": {
-		"xCoordinate": 3,
-		"yCoordinate": "C"
-	}
+  "description": "Das Impfzentrum! Ein Ort der Hoffnung!",
+  "image": "https://www.ndr.de/nachrichten/hamburg/impfzentrum220_v-contentxl.jpg",
+  "timeOfDayStart": 0,
+  "timeOfDayEnd": 24,
+  "actions": [
+    {
+      "text": "Schon lange hast du auf deinen Termin gewartet, heute ist es endlich so weit: Lass dich impfen!",
+      "probability": 1,
+      "score": -10,
+      "duration": 1,
+      "response": "One step closer to Herdenimmunität!",
+      "newStart": null
+    },
+    {
+      "text": "Versuch dich ins Impfzentrum zu schleichen, vielleicht kannst du ja ein paar Dosen Impfstoff stehlen.",
+      "probability": 1,
+      "score": -10,
+      "duration": 1,
+      "response": "Du schleichst dich erfolgreich ins Impfzentrum! Du schlenderst in ein Behandlungszimmer, um nach Impfstoff zu suchen. /n Doch ehe du dich versiehst, hast du eine Spritze im Arm. Die Ärztin lächelt dich freundlich an, aber du merkst schon, wie du langsam Autism und 5G bekommst.",
+      "newStart": null
+    },
+    {
+      "text": "Versuche die Leute, die ins Impfzentrum wollen, zu überzeugen wieder zu gehen.",
+      "probability": 1,
+      "score": 1,
+      "duration": 3,
+      "response": "Irgendwie will keiner auf dich hören. Mehrere Leute haben dir sogar einen Vogel gezeigt!",
+      "newStart": null
+    }
+  ],
+  "here": {
+    "xCoordinate": 4,
+    "yCoordinate": "C"
+  },
+  "north": {
+    "xCoordinate": 4,
+    "yCoordinate": "B"
+  },
+  "east": {
+    "xCoordinate": 5,
+    "yCoordinate": "C"
+  },
+  "south": {
+    "xCoordinate": 4,
+    "yCoordinate": "D"
+  },
+  "west": {
+    "xCoordinate": 3,
+    "yCoordinate": "C"
+  }
 }
