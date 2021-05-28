@@ -5,10 +5,10 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Content Update="Data\4D.json">
+      <Content Update="Data\4E.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
-      <Content Update="Data\5C.json">
+      <Content Update="Data\4B.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
       <Content Update="Data\4C.json">
