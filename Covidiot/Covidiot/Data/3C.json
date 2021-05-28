@@ -1,0 +1,47 @@
+﻿{
+  "description": "Du siehst das Rathaus vor Dir. Im Eingangsbereich liegen viele Blumen. Offenbar hat vor kurzem eine Hochzeit stattgefunden!\n Du hebst ohne weiter nachzudenken einen großen liegengelassenen Zettel vom Boden auf",
+  "image": "https://esens.de/wp-content/uploads/2019/08/rathaus-esens-sommer.jpg",
+  "timeOfDayStart": 0,
+  "timeOfDayEnd": 24,
+  "actions": [
+    {
+      "text": "Du liest den Zettel durch",
+      "probability": 1,
+      "score": 1,
+      "duration": 1,
+      "response": "Áuf dem Blatt steht folgender Text: \"Hochzeit:WSW\". Der Zettel und jetzt auch deine Hand fühlt sich etwas abgegrabbelt an.",
+      "newStart": {
+        "xCoordinate": 1,
+        "yCoordinate": "A"
+      }
+    },
+    {
+      "text": "Du wirfst den Zettel in den nächsten Müllkorb und desinfizierst erstmal Deine Hände",
+      "probability": 1,
+      "score": -1,
+      "duration": 1,
+      "response": "Wer weiß wer das Ding vorher angefasst hat. ",
+      "newStart": null
+    }
+  ],
+  "here": {
+    "xCoordinate": 3,
+    "yCoordinate": "C"
+  },
+  "north": {
+    "xCoordinate": 3,
+    "yCoordinate": "B"
+  },
+  "east": {
+    "xCoordinate": 4,
+    "yCoordinate": "C"
+  },
+  "south": {
+    "xCoordinate": 3,
+    "yCoordinate": "D"
+  },
+  "west": {
+    "xCoordinate": 2,
+    "yCoordinate": "C"
+  }
+}
