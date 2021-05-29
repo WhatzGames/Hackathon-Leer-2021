@@ -1,35 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Covidiot.Models;
-using Covidiot.Services;
 
 namespace Covidiot.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly ActiveTimedAction _action;
 
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            var coords = new MapNodeCoordinate {XCoordinate = 3, YCoordinate = 'D'};
-            _action = new ActiveTimedAction
-            {
-                Time = 24,
-                CurrentTimedAction = JsonReadService.ReadAction(coords).GetAwaiter().GetResult()
-            };
         }
 
         public IActionResult Index()
         {
-            return View(_action);
+            return View();
         }
 
         public IActionResult ScoreBoard()

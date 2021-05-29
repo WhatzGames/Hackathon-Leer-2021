@@ -7,7 +7,7 @@ namespace Covidiot.Services
 {
     public class Executor
     {
-        private ActiveTimedAction TimedAction { get; }
+        public ActiveTimedAction TimedAction { get; }
 
         public TimedNodeAction NodeAction
         {
@@ -29,7 +29,7 @@ namespace Covidiot.Services
                 _ => throw new ArgumentOutOfRangeException(nameof(direction), direction, null)
             });
 
-        public void Do(ushort index)
+        public void Do(int index)
         {
             if (index >= NodeAction.Actions.Length)
                 return;

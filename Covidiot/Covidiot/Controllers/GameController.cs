@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Covidiot.Models;
 using Covidiot.Services;
@@ -31,18 +29,22 @@ namespace Covidiot.Controllers
                 return Sessions[guid];
             var activeTimedAction = new ActiveTimedAction
             {
+                Time = 24,
                 CurrentTimedAction = JsonReadService.ReadAction(new MapNodeCoordinate{XCoordinate = 4, YCoordinate = 'E'}).GetAwaiter().GetResult(),
             };
             return Sessions[guid] = new Executor(activeTimedAction);
         }
 
-        [HttpGet("timedaction")]
+        [HttpGet("globalData")]
+        public ActiveTimedAction GetActiveTimedAction(string guid) => GetExecutor(guid).TimedAction;
+
+        [HttpGet("timedAction")]
         public TimedNodeAction GetTimedAction(string guid) => GetExecutor(guid).NodeAction;
 
         [HttpGet("walk")]
         public Task Walk(string guid, Direction direction) => GetExecutor(guid).Walk(direction);
         
         [HttpGet("do")]
-        public void Do(string guid, ushort action) => GetExecutor(guid).Do(action);
+        public void Do(string guid, int index) => GetExecutor(guid).Do(index);
     }
 }
