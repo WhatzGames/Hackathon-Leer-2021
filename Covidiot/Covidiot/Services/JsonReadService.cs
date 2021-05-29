@@ -10,7 +10,7 @@ namespace Covidiot.Services
     {
         public static Task<TimedNodeAction> ReadAction(MapNodeCoordinate coordinate) =>
             ReadAction($"{coordinate.XCoordinate}{coordinate.YCoordinate}");
-        private static async Task<TimedNodeAction> ReadAction(string tileCoordinate)
+        internal static async Task<TimedNodeAction> ReadAction(string tileCoordinate)
         {
             var location = Path.Join(Startup.DataDirectory, $"{tileCoordinate}.json");
             var reader = File.Open(location, FileMode.Open, FileAccess.Read);
