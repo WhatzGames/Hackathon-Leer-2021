@@ -3,6 +3,7 @@ const scoreElement = document.getElementById('score');
 const riskElement = document.getElementById('risk');
 const timeElement = document.getElementById('time');
 const buttonsContainer = document.getElementById('buttons');
+const buttonsContainer2 = document.getElementById('buttons2');
 const imageElement = document.getElementById('image');
 const alertElement = document.getElementById('alertBox');
 const walkElement = document.getElementById('walking');
@@ -15,7 +16,7 @@ if(id === null){
 }
 let name = {};
 
-const directions = ["Nord", "Ost", "Süd", "West"];
+const directions = ["Nord","West", "Süd", "Ost"];
 let lastActionLocationResult = undefined;
 
 async function refreshGlobals(){
@@ -35,6 +36,7 @@ async function startGame(){
 }
 
 async function showTextNode() {
+    buttonsContainer2.innerHTML = "";
     const gameData = await GetAction();
     await refreshGlobals();
     imageElement.src = gameData.image;
@@ -88,7 +90,21 @@ function createDirection(direction){
         resetButtonsContainer()
         await walkOption(direction)
     });
-    buttonsContainer.appendChild(button);
+    
+    switch (direction){
+        case "Nord":
+            buttonsContainer.appendChild(button)
+            break;
+        case "Ost":
+            buttonsContainer2.appendChild(button)
+            break;
+        case "West":
+            buttonsContainer2.appendChild(button)
+            break;
+        case "Süd":
+            buttonsContainer2.appendChild(button)
+            break;
+    }
 }
 
 async function runAction(index){
