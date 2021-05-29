@@ -4,7 +4,7 @@ const timeElement = document.getElementById('time');
 const optionButtonsElement = document.getElementById('option-buttons');
 const directionButtonsElement = document.getElementById('direction-buttons');
 const imageElement = document.getElementById('image');
-const responseElement = document.getElementById('response');
+const alertElement = document.getElementById('alertBox');
 
 let score = 0;
 let duration = 24;
@@ -22,7 +22,6 @@ async function startGame() {
 
 function showTextNode(gameData) {
     const textNode = gameData;
-    responseElement.innerText = null;
     textElement.innerText = textNode.description;
     scoreElement.innerText = score.toString() + " Score";
     timeElement.innerText = duration.toString() + " Stunden verbleibend";
@@ -49,6 +48,7 @@ function showTextNode(gameData) {
 }
 
 function createOption(action, index){
+    hideElement(alertElement);
     const button = document.createElement('button')
     button.innerText = action.text
     button.classList.add('btn')
@@ -71,7 +71,9 @@ async function selectOption(option, index) {
 
     score = score + option.score;
     duration = duration - option.duration;
-    responseElement.innerText = option.response;
+    
+    showElement(alertElement);
+    alertElement.innerText = option.response;
     
     if(duration === 0){
         console.log("End");
@@ -110,5 +112,12 @@ function uuidv4() {
     });
 }
 
+function hideElement(element){
+    element.style.visibility = "hidden";
+}
+
+function showElement(element){
+    element.style.visibility = "visible";
+}
 
 startGame()
