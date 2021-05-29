@@ -16,13 +16,16 @@ async function refreshGlobals(){
 }
 
 async function showTextNode() {
+    hideElement(alertElement);
     const gameData = await GetAction();
     await refreshGlobals();
-    textElement.innerText = gameData.description;
     imageElement.src = gameData.image;
-    gameData.actions.forEach((action, index) => {
-        createOption(action, index);
-    })
+    await typeEffect(textElement, 37, gameData.description, () => {
+        gameData.actions.forEach((action, index) => {
+            createOption(action, index);
+        });
+    });
+    
 }
 
 function createButton(content){
@@ -37,7 +40,6 @@ function resetButtonsContainer(){
 }
 
 function createOption(action, index){
-    hideElement(alertElement);
     const button = createButton(action.text);
     button.addEventListener('click', async () => {
         resetButtonsContainer();
@@ -94,6 +96,24 @@ function hideElement(element){
 
 function showElement(element){
     element.style.visibility = "visible";
+}
+
+async function typeEffect(element, speed, data, action) {
+    const text = data;
+    element.innerText = "";
+
+    let i = 0;
+    const timer = await setInterval(async function() {
+        if (i < text.length) {
+            element.append(text.charAt(i));
+            i++;
+        } else {
+            clearInterval(timer);
+            await new Promise(resolve => setTimeout(resolve, 500));
+            action();
+        }
+    }, speed);
+    
 }
 
 showTextNode();
