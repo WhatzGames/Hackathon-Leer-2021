@@ -4,15 +4,22 @@ const timeElement = document.getElementById('time');
 const optionButtonsElement = document.getElementById('option-buttons');
 const directionButtonsElement = document.getElementById('direction-buttons');
 
-let score = 0;
-let duration = 24;
+let globalData;
 
 
-let id = {}
+function GetGlobalData(){
+    return fetch(`/api/Game/globalData?guid=${id}`)
+        .then(response => response.json())
+        .catch(error => console.error(error));
+}
 
-const directions = ["north", "east", "south", "west"];
+
+let id;
+
+const directions = ["Nord", "Ost", "Süd", "West"];
 
 async function startGame() {
+    globalData = await GetGlobalData();
     id = uuidv4();
     const data = await GetAction();
     showTextNode(data)
@@ -21,8 +28,8 @@ async function startGame() {
 function showTextNode(gameData) {
     const textNode = gameData;
     textElement.innerText = textNode.description;
-    scoreElement.innerText = score.toString() + " Score";
-    timeElement.innerText = duration.toString() + " Stunden verbleibend";
+    scoreElement.innerText = globalData.totalScore + " Score";
+    timeElement.innerText = globalData.time + " Stunden verbleibend";
     
     while (optionButtonsElement.firstChild) {
         optionButtonsElement.removeChild(optionButtonsElement.firstChild)
@@ -63,21 +70,16 @@ function createDirection(data){
 async function selectOption(option, index) {
     if (option.newStart != null) {
         return startGame()
-    }
-
-    score = score + option.score;
-    duration = duration - option.duration;
-
-    if(duration === 0){
-        console.log("End");
-    }
-    
+    }    
     await postData(index);
+    const data = await GetAction();
+    showTextNode(data)
 }
 
 async function postData(index){
     await fetch(`/api/Game/Do?guid=${id}&index=${index}`)
-        .catch(error => console.log("Something went wrong"));
+        .catch(error => console.error(error));
+    globalData = await GetGlobalData();
 }
 
 async function GetAction(){
