@@ -13,7 +13,7 @@ namespace Covidiot.Models
         public string TotalScore => $"{TotalScoreValue:N}";
         [JsonIgnore]
         public float TotalScoreValue { get; set; }
-        [JsonPropertyName("risc")]
-        public string Risc { get; set; }
+        [JsonPropertyName("risk")]
+        public string Risk { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿const textElement = document.getElementById('text');
 const scoreElement = document.getElementById('score');
+const riskElement = document.getElementById('risk');
 const timeElement = document.getElementById('time');
 const buttonsContainer = document.getElementById('buttons');
 const imageElement = document.getElementById('image');
@@ -17,6 +18,7 @@ async function refreshGlobals(){
     const globalData = await GetGlobalData();
     scoreElement.innerText = globalData.totalScore + " Score";
     timeElement.innerText = globalData.time + " Stunden verbleibend";
+    riskElement.innerText = "Risko: " + globalData.risk;
 }
 
 async function showTextNode() {
