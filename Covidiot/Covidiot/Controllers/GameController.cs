@@ -60,9 +60,9 @@ namespace Covidiot.Controllers
         public Task Jump(string guid, string newStart) => GetExecutor(guid).Jump(newStart);
 
         [HttpGet("Add")]
-        public async Task Add(string name, uint score) => await _scoreboardService.Add(new Player()
+        public async Task Add(string name, float score) => await _scoreboardService.Add(new Player()
         {
-            Name = name, Score = score
+            Name = name, Score = score * 0.01f
         });
 
     }

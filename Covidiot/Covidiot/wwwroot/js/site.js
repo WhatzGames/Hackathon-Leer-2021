@@ -143,7 +143,7 @@ async function jumpOption() {
 
 async function Add(){
     const globalData = await GetGlobalData();
-    await fetch(`api/Game/Add?Name=${name}&score=${globalData.totalScore}`);
+    await fetch(`api/Game/Add?Name=${name}&score=` + encodeURIComponent(globalData.totalScore));
 }
 
 async function endGame(time, score){

@@ -10,7 +10,7 @@ namespace Covidiot.Models
     public class Player
     {
         public string Name { get; set; }
-        public uint Score { get; set; }
+        public float Score { get; set; }
     }
     
 }
