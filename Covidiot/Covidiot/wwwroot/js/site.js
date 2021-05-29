@@ -21,7 +21,7 @@ async function refreshGlobals(){
     const globalData = await GetGlobalData();
     scoreElement.innerText = globalData.totalScore + " Score";
     timeElement.innerText = globalData.time + " Stunden verbleibend";
-    riskElement.innerText = "Risko: " + globalData.risk;
+    riskElement.innerText = "Risiko: " + globalData.risk;
     await endGame(globalData.time, globalData.totalScore);
 }
 
