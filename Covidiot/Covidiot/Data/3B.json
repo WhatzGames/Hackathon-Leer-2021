@@ -1,6 +1,8 @@
 {
   "description": "Die Reklametafel vom Kino zeigt in großen Buchstaben: SPEZIALVORSTELLUNG - QUARANTINE! \n Ob das wohl lustig sein soll?",
   "image": "https://www.wolfsburg.de/~/media/wolfsburg/images/alle-bilder/kultur/kino_rainer-sturm_pixelio_20150222.jpg?la=de-DE",
+  "peoplePresent": 20,
+  "rValue": 0.5,
   "timeOfDayStart": 0,
   "timeOfDayEnd": 24,
   "actions": [

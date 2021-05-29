@@ -1,6 +1,8 @@
 ﻿{
   "description": "Du siehst das Rathaus vor Dir. Im Eingangsbereich liegen viele Blumen. Offenbar hat vor kurzem eine Hochzeit stattgefunden!\n Du hebst ohne weiter nachzudenken einen großen liegengelassenen Zettel vom Boden auf",
   "image": "https://esens.de/wp-content/uploads/2019/08/rathaus-esens-sommer.jpg",
+  "peoplePresent": 2,
+  "rValue": 0.01,
   "timeOfDayStart": 0,
   "timeOfDayEnd": 24,
   "actions": [
