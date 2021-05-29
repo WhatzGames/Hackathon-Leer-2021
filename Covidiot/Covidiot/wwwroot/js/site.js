@@ -4,6 +4,8 @@ const timeElement = document.getElementById('time');
 const buttonsContainer = document.getElementById('buttons');
 const imageElement = document.getElementById('image');
 const alertElement = document.getElementById('alertBox');
+const walkElement = document.getElementById('walking');
+const allElement = document.getElementById('all');
 
 const id = uuidv4();
 let name = {};
@@ -19,6 +21,7 @@ async function refreshGlobals(){
 
 async function startGame(){
     if(window.location.href == "https://localhost:5001/" || "https://localhost:5001/home" == window.location.href){
+        hideElement(walkElement);
         name = prompt("Geben Sie Ihren Name an", 'UserName');
         await showTextNode();   
     }
@@ -88,6 +91,11 @@ function GetAction(){
 }
 
 async function walkOption(data){
+    hideElement(allElement);
+    showElement(walkElement);
+    await new Promise(resolve => setTimeout(resolve, 3000));
+    hideElement(walkElement);
+    showElement(allElement);
     await fetch(`api/Game/Walk?guid=${id}&direction=${data}`);
     await showTextNode();
 }
@@ -113,11 +121,11 @@ function uuidv4() {
 }
 
 function hideElement(element){
-    element.style.visibility = "hidden";
+    element.style.display = "none";
 }
 
 function showElement(element){
-    element.style.visibility = "visible";
+    element.style.display = "block";
 }
 
 async function typeEffect(element, speed, data, action) {
