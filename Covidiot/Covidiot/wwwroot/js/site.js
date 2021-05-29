@@ -5,7 +5,11 @@ const buttonsContainer = document.getElementById('buttons');
 const imageElement = document.getElementById('image');
 const alertElement = document.getElementById('alertBox');
 
-const id = uuidv4();
+let id = sessionStorage.getItem("id");
+if(id === null){
+    id = uuidv4();
+    sessionStorage.setItem("id", id);
+}
 
 const directions = ["Nord", "Ost", "Süd", "West"];
 
