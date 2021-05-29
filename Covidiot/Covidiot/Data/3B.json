@@ -8,23 +8,23 @@
   "actions": [
     {
       "text": "Versuche, dich ohne Maske ins Kino reinzuschleichen. ",
-      "probability": 1,
-      "score": 4,
+      "probability": 0.2,
+      "score": 2,
       "duration": 3,
       "response": "Geschafft! Du lässt dich in den bequemen Sitz fallen und isst das Popcorn, das du direkt beim Reinschleichen mit hineingeschmuggelt hast.",
       "newStart": null
     },
     {
       "text": "Überrede den Typen, der die Tickets abreißt, dass so eine Maske im Kino gar nicht nötig ist.",
-      "probability": 1,
-      "score": 7,
+      "probability": 0.5,
+      "score": 4,
       "duration": 3,
       "response": "Erst schaut der Kerl skeptisch, aber am Ende siegt dein Überzeugungsvermögen über seinen gesunden Menschenverstand. /n Zufrieden gehst du ins Kino und siehst, wie auch hinter dir in der Schlange ein paar Menschen ihre Masken abnehmen.",
       "newStart": null
     },
     {
       "text": "Schau mit Maske auf und drei Sitzen Abstand gemütlich den Film.",
-      "probability": 1,
+      "probability": 0.01,
       "score": -2,
       "duration": 3,
       "response": "Du fragst dich, wie man eigentlich mit Maske auf sein teures Popcorn essen soll. Naja, was soll's.",
