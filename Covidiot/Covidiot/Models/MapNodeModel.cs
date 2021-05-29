@@ -18,13 +18,18 @@ namespace Covidiot.Models
         [JsonPropertyName("description")]
         public string Description { get; set; } = "";
         
+        [JsonPropertyName("peoplePresent")]
+        public int PeoplePresent { get; set; }
+        
+        [JsonPropertyName("rValue")]
+        public float RValue { get; set; }
+        
         [JsonPropertyName("timeOfDayStart")]
         public int TimeOfDayStart { get; set; } = 0;
 
         [JsonPropertyName("timeOfDayEnd")]
         public int TimeOfDayEnd { get; set; } = 24;
-
-
+        
         [JsonPropertyName("actions")]
         public Action[] Actions { get; set; } = new Action[] { };
 
@@ -51,7 +56,7 @@ namespace Covidiot.Models
         public string Text { get; set; } = "";
 
         [JsonPropertyName("probability")]
-        public decimal Probability { get; set; } = 1m;
+        public float Probability { get; set; }
 
         [JsonPropertyName("score")]
         public int Score { get; set; } = 0;

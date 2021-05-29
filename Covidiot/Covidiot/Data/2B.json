@@ -1,6 +1,8 @@
 ﻿{
   "description": "Du kommst an einer Apotheke vorbei. Stimmt ja, du hast nur noch eine Maske zu Hause. Also gehst du hinein. Die Apothekerin lächelt dich freundlich an. Ihr Lächeln vergeht, als du Masken wünschst. ",
   "image": "https://www.premium-apotheken-berlin.de/wp-content/uploads/2019/06/teaser-apotheke-gesundbrunnen-center-berlin-wedding.jpg",
+  "peoplePresent": 3,
+  "rValue": 0.1,
   "timeOfDayStart": 0,
   "timeOfDayEnd": 24,
   "actions": [

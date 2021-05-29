@@ -1,11 +1,18 @@
 ﻿const textElement = document.getElementById('text');
 const scoreElement = document.getElementById('score');
+const riskElement = document.getElementById('risk');
 const timeElement = document.getElementById('time');
 const buttonsContainer = document.getElementById('buttons');
 const imageElement = document.getElementById('image');
 const alertElement = document.getElementById('alertBox');
+const walkElement = document.getElementById('walking');
+const allElement = document.getElementById('all');
 
-const id = uuidv4();
+let id = sessionStorage.getItem("id");
+if(id === null){
+    id = uuidv4();
+    sessionStorage.setItem("id", id);
+}
 let name = {};
 
 const directions = ["Nord", "Ost", "Süd", "West"];
@@ -14,13 +21,15 @@ async function refreshGlobals(){
     const globalData = await GetGlobalData();
     scoreElement.innerText = globalData.totalScore + " Score";
     timeElement.innerText = globalData.time + " Stunden verbleibend";
-    await endGame(globalData.time);
+    riskElement.innerText = "Risko: " + globalData.risk;
+    await endGame(globalData.time, globalData.totalScore);
 }
 
 async function startGame(){
     if(window.location.href == "https://localhost:5001/" || "https://localhost:5001/home" == window.location.href){
+        hideElement(walkElement);
         name = prompt("Geben Sie Ihren Name an", 'UserName');
-        await showTextNode();   
+        await showTextNode();
     }
 }
 
@@ -29,7 +38,7 @@ async function showTextNode() {
     await refreshGlobals();
     imageElement.src = gameData.image;
     hideElement(alertElement);
-    await typeEffect(textElement, 37, gameData.description, () => {
+    await typeEffect(textElement, 10, gameData.description, () => {
         gameData.actions.forEach((action, index) => {
             createOption(action, index);
         });
@@ -88,6 +97,11 @@ function GetAction(){
 }
 
 async function walkOption(data){
+    hideElement(allElement);
+    showElement(walkElement);
+    await new Promise(resolve => setTimeout(resolve, 3000));
+    hideElement(walkElement);
+    showElement(allElement);
     await fetch(`api/Game/Walk?guid=${id}&direction=${data}`);
     await showTextNode();
 }
@@ -97,9 +111,11 @@ async function Add(){
     await fetch(`api/Game/Add?Name=${name}&score=${globalData.totalScore}`);
 }
 
-async function endGame(time){
+async function endGame(time, score){
     if(time === 0 || time < 0){
         await Add();
+        window.alert("Deine Zeit ist abgelaufen. Du hast einen Score von " + score)
+        window.location = "https://localhost:5001/home/scoreboard";
     }
 }
 
@@ -111,11 +127,11 @@ function uuidv4() {
 }
 
 function hideElement(element){
-    element.style.visibility = "hidden";
+    element.style.display = "none";
 }
 
 function showElement(element){
-    element.style.visibility = "visible";
+    element.style.display = "block";
 }
 
 async function typeEffect(element, speed, data, action) {

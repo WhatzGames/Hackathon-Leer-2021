@@ -1,6 +1,8 @@
 {
   "description": "An der Bushaltestelle hängen ein paar Teenager rum. Sie haben zwar keine Masken auf, aber sie sehen aus, als ob sie Spaß hätten.",
   "image": "https://www.nw.de/_em_daten/_cache/image/1xqKfknBZ0PBVXOzTasJso7ViOuGXaBIjgoZr9aYM-5v_rEelvuFFQDpbv8iJ7eodg/150930-1852-36d16f77a749553f.jpg",
+  "peoplePresent": 8,
+  "rValue": 0.2,
   "timeOfDayStart": 0,
   "timeOfDayEnd": 24,
   "actions": [

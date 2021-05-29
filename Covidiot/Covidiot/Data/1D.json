@@ -1,6 +1,8 @@
 {
   "description": "Auf einer großen Blumenwiese steht anmutig ein verliebtes Hochzeitspaar und küsst sich wiederholt vor den Bilder machenden Verwandten und Bekannten.\n Von diesen Verwandten und Bekannten gibt es eine ganze Menge -  ca. 300 Personen, die sich alle auf einem sehr kleinen Teil dieser Blumenwiese drängeln. \n Du stutzt als Du das Gesicht der Braut siehst, es handelt sich um eine Arbeitskollegin!",
   "image": "https://img.freepik.com/fotos-kostenlos/bunte-blumenwiese-und-blauer-himmel-mit-weisser-wolke_42414-782.jpg?size=626&ext=jpg",
+  "peoplePresent": 298,
+  "rValue": 9,
   "timeOfDayStart": 0,
   "timeOfDayEnd": 24,
   "actions": [

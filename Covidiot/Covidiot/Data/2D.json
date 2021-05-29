@@ -1,6 +1,8 @@
 {
 	"description": "Du hast dich zwar nicht angemeldet, aber an der Tür von der Volkshochschule hängt ein Zettel mit Freiluftkursen, die heute anfangen. /n Kurzfristig entscheidest du dich teilzunehmen.",
 	"image": "https://cdn.prod.www.spiegel.de/images/5f8d3664-0001-0004-0000-000001466954_w948_r1.77_fpx68.61_fpy50.jpg",
+	"peoplePresent": 10,
+	"rValue": 1.1,
 	"timeOfDayStart": 0,
 	"timeOfDayEnd": 24,
 	"action1": {

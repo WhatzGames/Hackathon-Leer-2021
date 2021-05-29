@@ -1,6 +1,8 @@
 {
   "description": "Der Discounter deiner Wahl. Hier gibt es alles, nur kein Klopapier.",
   "image": "https://static.euronews.com/articles/stories/04/55/22/00/773x435_cmsv2_0cc90040-5d30-5cbf-8efb-e6e42aae2940-4552200.jpg",
+  "peoplePresent": 35,
+  "rValue": 1.5,
   "timeOfDayStart": 0,
   "timeOfDayEnd": 24,
   "actions": [
