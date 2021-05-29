@@ -1,6 +1,8 @@
 ﻿{
   "description": "Du wunderst dich, dass nach und nach immer mehr Menschen in die selbe Richtung strömen wie du. Du entdeckst jemanden, der ein Schild in der Hand hält: \"Wir machen das nicht mehr mit!!!\" Du erinnerst dich daran, dass eine Demonstration gegen die Corona-Maßnahmen hier heute stattfinden sollte. Langsam erreicht ihr, allmählich immer dichter gedrängt, den von Polizisten abgesicherten Platz, auf dem schon eine gewisse Menschenmenge Schilder in die Höhe hält. Was machst du?",
   "image": "https://www.deutschlandfunk.de/media/thumbs/c/c3171e3fab0598101b4e6f7ee705fa55v1_max_755x425_b3535db83dc50e27c1bb1392364c95a2.jpg?key=118bd2",
+  "peoplePresent": 150,
+  "rValue": 7.5,
   "timeOfDayStart": 0,
   "timeOfDayEnd": 24,
   "actions": [

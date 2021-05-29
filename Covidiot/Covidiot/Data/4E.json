@@ -1,6 +1,8 @@
 ﻿{
   "description": "Du bist zu Hause. Es ist ein neuer Tag im Pandemiezeitalter. Corona ist im vollem Gange, die Regierung hat Maßnahmen ergriffen. Du selbst bist mitten drin. Und stehst dem ganzen mindestens skeptisch gegenüber. \nDu darfst diesen Tag in 24 Stunden gestalten, hingehen, wohin du willst, und erleben. Sei ein guter Covidiot, oder lass den gesunden Menschenverstand spielen. Deine Entscheidung.\nDu kannst jetzt ganz einfach loslegen. Geh sofort raus, oder tu etwas anderes. Viel Spaß dabei!",
   "image": "https://img.posterlounge.de/images/big/1870155.jpg",
+  "peoplePresent": 1,
+  "rValue": 0.0,
   "timeOfDayStart": 0,
   "timeOfDayEnd": 24,
   "actions": [
