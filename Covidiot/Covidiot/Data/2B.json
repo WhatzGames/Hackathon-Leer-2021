@@ -1,5 +1,6 @@
 ﻿{
   "description": "Du kommst an einer Apotheke vorbei. Stimmt ja, du hast nur noch eine Maske zu Hause. Also gehst du hinein. Die Apothekerin lächelt dich freundlich an. Ihr lächeln vergeht, als du Masken wünschst. ",
+  "image": "https://www.premium-apotheken-berlin.de/wp-content/uploads/2019/06/teaser-apotheke-gesundbrunnen-center-berlin-wedding.jpg",
   "timeOfDayStart": 0,
   "timeOfDayEnd": 24,
   "actions": [
@@ -34,7 +35,7 @@
   },
   "north": {
     "xCoordinate": 2,
-    "yCoordinate": "A"
+    "yCoordinate": "E"
   },
   "east": {
     "xCoordinate": 3,
@@ -42,10 +43,10 @@
   },
   "south": {
     "xCoordinate": 2,
-    "yCoordinate": "C"
+    "yCoordinate": "D"
   },
   "west": {
-    "xCoordinate": 1,
+    "xCoordinate": 4,
     "yCoordinate": "B"
   }
 }

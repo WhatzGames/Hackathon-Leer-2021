@@ -2,6 +2,8 @@
 const scoreElement = document.getElementById('score');
 const timeElement = document.getElementById('time');
 const buttonsContainer = document.getElementById('buttons');
+const imageElement = document.getElementById('image');
+const alertElement = document.getElementById('alertBox');
 
 let globalData;
 
@@ -32,6 +34,7 @@ function refreshGlobals(){
 function showTextNode(gameData) {
     refreshGlobals();
     textElement.innerText = gameData.description;
+    imageElement.innerText = gameData.image;
     gameData.actions.forEach((action, index) => {
         createOption(action, index);
     })
@@ -49,6 +52,7 @@ function resetButtonsContainer(){
 }
 
 function createOption(action, index){
+    hideElement(alertElement);
     const button = createButton(action.text);
     button.addEventListener('click', async () => {
         resetButtonsContainer();
@@ -72,7 +76,11 @@ function createDirection(direction){
 async function selectOption(option, index) {
     if (option.newStart != null) {
         return startGame()
-    }    
+    }
+
+    alertElement.innerText = option.response;
+    showElement(alertElement);
+    
     await postData(index);
     const data = await GetAction();
     showTextNode(data)
@@ -109,5 +117,12 @@ function uuidv4() {
     });
 }
 
+function hideElement(element){
+    element.style.visibility = "hidden";
+}
+
+function showElement(element){
+    element.style.visibility = "visible";
+}
 
 startGame()

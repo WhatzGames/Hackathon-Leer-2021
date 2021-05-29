@@ -1,5 +1,6 @@
 ﻿{
   "description": "Du schlenderst die Straße entlang, bis deine Aufmerksamkeit durch den süßen Duft von Honig auf das Gebäude gegenüber gelenkt wird. Du siehst den örtlichen Biomarkt, vor dem heute ein Stand steht, der \"natürliche Bienenprodukte\" verkauft. Ein freundlich aussehender Herr mit Rauschebart winkt dich heran. \"Hallööchen! Kennen Sie schon diese Honigkerzen! Ich verrate Ihnen was!\" Er beugt sich verschwörerisch vor. \"Diese Kerzen sind ganz besonders! Ich habe Reste des Impfstoffes beigemischt, die ich beim Impfzentrum gefunden habe!\" Er zwinkert dir zu. \"Das Feuer dieser Kerze wirkt also homöopathisch sowohl gegen das Virus, als auch gegen Impfnebenwirkungen. Eine Kerze für 10, drei für 20 Euro! Ein Schnäppchen Sie mich fragen.\" sagte er breit grinsend. Was machst du?",
+  "image": "https://www.kerzle-manufaktur.shop/storage/images/IMG-20180829-WA0014.jpg?hash=452cb2f12e851b3c042bf64106279eebd030c7d1&shop=84402948&width=600",
   "timeOfDayStart": 0,
   "timeOfDayEnd": 24,
   "actions": [
@@ -37,15 +38,15 @@
     "yCoordinate": "D"
   },
   "east": {
-    "xCoordinate": 3,
+    "xCoordinate": 4,
     "yCoordinate": "E"
   },
   "south": {
     "xCoordinate": 2,
-    "yCoordinate": "A"
+    "yCoordinate": "B"
   },
   "west": {
-    "xCoordinate": 1,
+    "xCoordinate": 4,
     "yCoordinate": "E"
   }
 }
