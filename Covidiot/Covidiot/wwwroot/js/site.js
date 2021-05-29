@@ -59,14 +59,6 @@ function createDirection(direction){
     buttonsContainer.appendChild(button);
 }
 
-async function selectOption(option, index) {
-    alertElement.innerText = option.response;
-    showElement(alertElement);
-    
-    await runAction(index);
-    await showTextNode();
-}
-
 async function runAction(index){
     await fetch(`/api/Game/Do?guid=${id}&index=${index}`)
         .catch(error => console.error(error));
