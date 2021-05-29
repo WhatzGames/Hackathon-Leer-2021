@@ -1,6 +1,8 @@
 {
   "description": "Das Impfzentrum! Ein Ort der Hoffnung!",
   "image": "https://www.ndr.de/nachrichten/hamburg/impfzentrum220_v-contentxl.jpg",
+  "peoplePresent": 25,
+  "rValue": 0.2,
   "timeOfDayStart": 0,
   "timeOfDayEnd": 24,
   "actions": [

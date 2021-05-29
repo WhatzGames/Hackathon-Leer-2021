@@ -35,7 +35,7 @@ namespace Covidiot.Services
                 return null;
             var action = NodeAction.Actions[index];
             TimedAction.Time -= action.Duration;
-            TimedAction.TotalScore += action.Score;
+            TimedAction.TotalScoreValue += action.Score + NodeAction.PeoplePresent * action.Probability * NodeAction.RValue;
             return action.NewStart;
         }
         

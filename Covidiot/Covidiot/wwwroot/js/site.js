@@ -1,5 +1,6 @@
 ﻿const textElement = document.getElementById('text');
 const scoreElement = document.getElementById('score');
+const riskElement = document.getElementById('risk');
 const timeElement = document.getElementById('time');
 const buttonsContainer = document.getElementById('buttons');
 const imageElement = document.getElementById('image');
@@ -7,7 +8,11 @@ const alertElement = document.getElementById('alertBox');
 const walkElement = document.getElementById('walking');
 const allElement = document.getElementById('all');
 
-const id = uuidv4();
+let id = sessionStorage.getItem("id");
+if(id === null){
+    id = uuidv4();
+    sessionStorage.setItem("id", id);
+}
 let name = {};
 
 const directions = ["Nord", "Ost", "Süd", "West"];
@@ -17,6 +22,7 @@ async function refreshGlobals(){
     const globalData = await GetGlobalData();
     scoreElement.innerText = globalData.totalScore + " Score";
     timeElement.innerText = globalData.time + " Stunden verbleibend";
+    riskElement.innerText = "Risko: " + globalData.risk;
     await endGame(globalData.time, globalData.totalScore);
 }
 
@@ -24,7 +30,7 @@ async function startGame(){
     if(window.location.href == "https://localhost:5001/" || "https://localhost:5001/home" == window.location.href){
         hideElement(walkElement);
         name = prompt("Geben Sie Ihren Name an", 'UserName');
-        await showTextNode();   
+        await showTextNode();
     }
 }
 

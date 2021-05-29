@@ -1,6 +1,8 @@
 {
   "description": "Hier ist die Polizei. Ausser den dienstleistenden Beamten ist kein Mensch zu sehen.",
   "image": "https://m.ga-online.de/media/newsimage_pub/638489/m-big/e7b1d6f8ffa1163aece189b8af192e68",
+  "peoplePresent": 10,
+  "rValue": 0.2,
   "timeOfDayStart": 0,
   "timeOfDayEnd": 24,
   "actions": [
