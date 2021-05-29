@@ -34,7 +34,7 @@ function refreshGlobals(){
 function showTextNode(gameData) {
     refreshGlobals();
     textElement.innerText = gameData.description;
-    imageElement.innerText = gameData.image;
+    imageElement.src = gameData.image;
     gameData.actions.forEach((action, index) => {
         createOption(action, index);
     })
@@ -59,6 +59,8 @@ function createOption(action, index){
         await postData(index);
         globalData = await GetGlobalData();
         refreshGlobals();
+        alertElement.innerText = action.response;
+        showElement(alertElement);
         directions.forEach(direction => createDirection(direction))
     });
     buttonsContainer.appendChild(button);
