@@ -28,7 +28,7 @@ async function refreshGlobals(){
 }
 
 async function startGame(){
-    if(window.location.href == "https://localhost:5001/" || "https://localhost:5001/home" == window.location.href){
+    if(window.location.href === "https://localhost:5001/" || "https://localhost:5001/home" === window.location.href){
         hideElement(walkElement);
         name = prompt("Geben Sie Ihren Name an", 'UserName');
         await showTextNode();
@@ -143,7 +143,7 @@ async function jumpOption() {
 
 async function Add(){
     const globalData = await GetGlobalData();
-    await fetch(`api/Game/Add?Name=${name}&score=${globalData.totalScore}`);
+    await fetch(`api/Game/Add?Name=${name}&score=` + encodeURIComponent(globalData.totalScore));
 }
 
 async function endGame(time, score){
