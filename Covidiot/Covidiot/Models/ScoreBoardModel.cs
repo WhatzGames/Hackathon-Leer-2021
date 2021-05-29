@@ -1,8 +1,10 @@
-﻿namespace Covidiot.Models
+﻿using System.Collections.Generic;
+
+namespace Covidiot.Models
 {
     public class ScoreBoardModel
     {
-        public Player[] Players { get; set; }
+        public List<Player> Players { get; set; }
     }
 
     public class Player
