@@ -1,5 +1,5 @@
 ﻿{
-  "description": "Du siehst das Rathaus vor Dir. Im Eingangsbereich liegen viele Blumen. Offenbar hat vor kurzem eine Hochzeit stattgefunden!\n Du hebst ohne weiter nachzudenken einen großen liegengelassenen Zettel vom Boden auf",
+  "description": "Du siehst das Rathaus vor Dir. Im Eingangsbereich liegen viele Blumen. Offenbar hat vor kurzem eine Hochzeit stattgefunden!\n Du hebst ohne weiter nachzudenken einen großen liegengelassenen Zettel vom Boden auf.",
   "image": "https://esens.de/wp-content/uploads/2019/08/rathaus-esens-sommer.jpg",
   "peoplePresent": 2,
   "rValue": 0.01,
@@ -7,19 +7,19 @@
   "timeOfDayEnd": 24,
   "actions": [
     {
-      "text": "Du liest den Zettel durch",
-      "probability": 1,
+      "text": "Du liest den Zettel durch.",
+      "probability": 0,
       "score": 1,
       "duration": 1,
       "response": "Áuf dem Blatt steht folgender Text: \"Hochzeit:WSW\". Der Zettel und jetzt auch deine Hand fühlt sich etwas abgegrabbelt an.",
       "newStart": null
     },
     {
-      "text": "Du wirfst den Zettel in den nächsten Müllkorb und desinfizierst erstmal Deine Hände",
-      "probability": 1,
+      "text": "Du wirfst den Zettel in den nächsten Müllkorb und desinfizierst erstmal Deine Hände.",
+      "probability": 0,
       "score": -1,
       "duration": 1,
-      "response": "Wer weiß wer das Ding vorher angefasst hat. ",
+      "response": "Wer weiß, wer das Ding vorher angefasst hat. ",
       "newStart": null
     }
   ],

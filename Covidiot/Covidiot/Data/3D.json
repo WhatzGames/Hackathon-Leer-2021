@@ -8,10 +8,10 @@
   "actions": [
     {
       "text": "Du stürzt dich mitten in Menge und demonstrierst mit.",
-      "probability": 1,
+      "probability": 0.1,
       "score": 10,
       "duration": 7,
-      "response": "Dabei verhaltet ihr euch so, dass ihr gegen die Richtlinien zu Demonstration verstößt. Die Polizei will die Demo auflösen, ihr wehrt euch. Schließlich setzt die Polizei sogar Wasserwerfer ein und verhaftet einzelne, sich heftig wehrende Demonstranten. Darunter bist auch du.",
+      "response": "Dabei verhaltet ihr euch so, dass ihr gegen die Richtlinien zu Demonstrationen verstößt. Die Polizei will die Demo auflösen, ihr wehrt euch. Schließlich setzt die Polizei sogar Wasserwerfer ein und verhaftet einzelne, sich heftig wehrende Demonstranten. Darunter bist auch du.",
       "newStart": {
         "xCoordinate": 1,
         "yCoordinate": "A"
@@ -19,18 +19,18 @@
     },
     {
       "text": "Du mischt dich unter die Menge, setzt deine Maske auf und versuchst andere davon zu überzeugen, es dir gleich zu tun.",
-      "probability": 1,
-      "score": 5,
+      "probability": 0.05,
+      "score": 3,
       "duration": 3,
       "response": "Erst weigern sich deine Mitdemonstranten, aber nachdem du ihnen erzählst, dass die Gesichtserkennung der Regierung wegen der Masken nicht so gut funktioniert, setzen sie sie hektisch auf und schauen sich paranoid nach der nächsten Kamera um. Du selbst demonstrierst friedlich weiter.",
       "newStart": null
     },
     {
       "text": "Es wird dir zu voll hier, und mit eigentlich findest du die Maßnahmen angemessen, auch wenn sie erdrückend sind.",
-      "probability": 1,
+      "probability": 0,
       "score": -1,
       "duration": 1,
-      "response": "Du schlägst eine andere Richtung ein wie die anderen Menschen. Du kommst nun wieder schneller voran. In der ferne hörst du die Polizei die Menge per Megaphon auffordern, doch bitte Masken entsprechend der Richtlinien zu nutzen...",
+      "response": "Du schlägst eine andere Richtung ein als die anderen Menschen. Du kommst nun wieder schneller voran. In der Ferne hörst du die Polizei die Menge per Megafon auffordern, doch bitte Masken entsprechend der Richtlinien zu nutzen.",
       "newStart": null
     }
   ],

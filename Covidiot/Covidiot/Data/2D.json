@@ -5,32 +5,30 @@
 	"rValue": 1.1,
 	"timeOfDayStart": 0,
 	"timeOfDayEnd": 24,
-	"actions": [
-		{
-			"text": "Kurs 1: Stricken für Anfänger",
-			"probability": 1,
-			"score": -1,
-			"duration": 2,
-			"response": "Jetzt kannst du deine Tage in Selbstisolation mit dem Stricken von flauschigen Gesichtsmasken verbringen!",
-			"newStart": null
-		},
-		{
-			"text": "Kurs 2: Trickbetrügerei Komplettkurs",
-			"probability": 1,
-			"score": 1,
-			"duration": 5,
-			"response": "Du lernst alles über Taschendiebstahl, heimliche Manöver und wie man alten Damen die Rente klaut. \n Deine neu erworbenen Fähigkeiten kommen dir bestimmt bei allen möglichen Missetaten zu Gute.",
-			"newStart": null
-		},
-		{
-			"text": "Kurs 3: Selbstfindungsyoga",
-			"probability": 1,
-			"score": 0,
-			"duration": 3,
-			"response": "Du bist eins mit dir selbst, noch nie hast du die Dinge so klar gesehen.",
-			"newStart": null
-		}
-	],
+	"action1": {
+		"text": "Kurs 1: Stricken für Anfänger",
+		"probability": 0.05,
+		"score": -1,
+		"duration": 2,
+		"response": "Jetzt kannst du deine Tage in Selbstisolation mit dem Stricken von flauschigen Gesichtsmasken verbringen!",
+		"newStart": null
+	},
+	"action2": {
+		"text": "Kurs 2: Trickbetrügerei Komplettkurs",
+		"probability": 0.05,
+		"score": 1,
+		"duration": 5,
+		"response": "Du lernst alles über Taschendiebstahl, heimliche Manöver und wie man alten Damen die Rente klaut. /n Deine neu erworbenen Fähigkeiten kommen dir bestimmt bei allen möglichen Missetaten zu Gute.",
+		"newStart": null
+	},
+	"action3": {
+		"text": "Kurs 3: Selbstfindungsyoga",
+		"probability": 0.05,
+		"score": 0,
+		"duration": 3,
+		"response": "Du bist eins mit deiner selbst, noch nie hast du die Dinge so klar gesehen.",
+		"newStart": null
+	},
 	"here": {
 		"xCoordinate": 2,
 		"yCoordinate": "D"
