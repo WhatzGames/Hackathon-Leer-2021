@@ -1,12 +1,12 @@
 ﻿{
-  "description": "Du kommst an einer Apotheke vorbei. Stimmt ja, du hast nur noch eine Maske zu Hause. Also gehst du hinein. Die Apothekerin lächelt dich freundlich an. Ihr lächeln vergeht, als du Masken wünschst. ",
+  "description": "Du kommst an einer Apotheke vorbei. Stimmt ja, du hast nur noch eine Maske zu Hause. Also gehst du hinein. Die Apothekerin lächelt dich freundlich an. Ihr Lächeln vergeht, als du Masken wünschst. ",
   "image": "https://www.premium-apotheken-berlin.de/wp-content/uploads/2019/06/teaser-apotheke-gesundbrunnen-center-berlin-wedding.jpg",
   "timeOfDayStart": 0,
   "timeOfDayEnd": 24,
   "actions": [
     {
       "text": "Du belässt es dabei und verlässt den Laden.",
-      "probability": 1,
+      "probability": 0.01,
       "score": -1,
       "duration": 1,
       "response": "Die Apothekerin sieht aus, als wolle sie noch etwas sagen, aber du hast, was du willst und gehst raus.",
@@ -14,17 +14,17 @@
     },
     {
       "text": "Du bestellst noch Schnelltests dazu.",
-      "probability": 1,
+      "probability": 0.01,
       "score": -2,
       "duration": 1,
-      "response": "Die Apothekerin seufzt schwer. Du verlässt den Laden und wunderst dich darüber",
+      "response": "Die Apothekerin seufzt schwer. Du verlässt den Laden und wunderst dich darüber.",
       "newStart": null
     },
     {
       "text": "Du fragst die Apothekerin, ob sie in diesen Zeiten noch andere Dinge empfehlen kann.",
-      "probability": 1,
+      "probability": 0.01,
       "score": 5,
-      "duration": 3,
+      "duration": 1,
       "response": "Ihr Gesicht hellt sich wieder auf. Sie erzählt dir, dass sie ganz besondere Schirmmützen verkauft, die zwischen den Stoffschichten eine flexible Aluminiumlegierung eingearbeitet haben. Diese hält unter anderem 5G-Strahlung ab. Nach längeren Überredungskünsten ihrerseits bestellst du schließlich eine solche auf Rechnung und verlässt die Apotheke.",
       "newStart": null
     }
