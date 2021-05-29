@@ -19,7 +19,7 @@ async function showTextNode() {
     const gameData = await GetAction();
     await refreshGlobals();
     textElement.innerText = gameData.description;
-    imageElement.innerText = gameData.image;
+    imageElement.src = gameData.image;
     gameData.actions.forEach((action, index) => {
         createOption(action, index);
     })
@@ -41,6 +41,9 @@ function createOption(action, index){
     const button = createButton(action.text);
     button.addEventListener('click', async () => {
         resetButtonsContainer();
+        alertElement.innerText = action.response;
+        showElement(alertElement);
+        await runAction(index);
         await refreshGlobals();
         directions.forEach(direction => createDirection(direction))
     });
