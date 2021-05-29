@@ -14,7 +14,7 @@ async function refreshGlobals(){
     const globalData = await GetGlobalData();
     scoreElement.innerText = globalData.totalScore + " Score";
     timeElement.innerText = globalData.time + " Stunden verbleibend";
-    await endGame(globalData.time);
+    await endGame(globalData.time, globalData.totalScore);
 }
 
 async function startGame(){
@@ -29,7 +29,7 @@ async function showTextNode() {
     await refreshGlobals();
     imageElement.src = gameData.image;
     hideElement(alertElement);
-    await typeEffect(textElement, 37, gameData.description, () => {
+    await typeEffect(textElement, 10, gameData.description, () => {
         gameData.actions.forEach((action, index) => {
             createOption(action, index);
         });
@@ -97,9 +97,11 @@ async function Add(){
     await fetch(`api/Game/Add?Name=${name}&score=${globalData.totalScore}`);
 }
 
-async function endGame(time){
+async function endGame(time, score){
     if(time === 0 || time < 0){
         await Add();
+        window.alert("Deine Zeit ist abgelaufen. Du hast einen Score von " + score)
+        window.location = "https://localhost:5001/home/scoreboard";
     }
 }
 
