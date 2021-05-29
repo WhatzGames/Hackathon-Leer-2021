@@ -46,5 +46,12 @@ namespace Covidiot.Controllers
         
         [HttpGet("do")]
         public void Do(string guid, int index) => GetExecutor(guid).Do(index);
+
+        [HttpGet("Add")]
+        public async Task Add(string name, uint score) => await _scoreboardService.Add(new Player()
+        {
+            Name = name, Score = score
+        });
+
     }
 }

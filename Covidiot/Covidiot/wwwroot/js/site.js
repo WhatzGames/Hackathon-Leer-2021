@@ -6,6 +6,7 @@ const imageElement = document.getElementById('image');
 const alertElement = document.getElementById('alertBox');
 
 const id = uuidv4();
+let name = {};
 
 const directions = ["Nord", "Ost", "Süd", "West"];
 
@@ -13,13 +14,21 @@ async function refreshGlobals(){
     const globalData = await GetGlobalData();
     scoreElement.innerText = globalData.totalScore + " Score";
     timeElement.innerText = globalData.time + " Stunden verbleibend";
+    await endGame(globalData.time);
+}
+
+async function startGame(){
+    if(window.location.href == "https://localhost:5001/" || "https://localhost:5001/home" == window.location.href){
+        name = prompt("Geben Sie Ihren Name an", 'UserName');
+        await showTextNode();   
+    }
 }
 
 async function showTextNode() {
-    hideElement(alertElement);
     const gameData = await GetAction();
     await refreshGlobals();
     imageElement.src = gameData.image;
+    hideElement(alertElement);
     await typeEffect(textElement, 37, gameData.description, () => {
         gameData.actions.forEach((action, index) => {
             createOption(action, index);
@@ -83,6 +92,17 @@ async function walkOption(data){
     await showTextNode();
 }
 
+async function Add(){
+    const globalData = await GetGlobalData();
+    await fetch(`api/Game/Add?Name=${name}&score=${globalData.totalScore}`);
+}
+
+async function endGame(time){
+    if(time === 0 || time < 0){
+        await Add();
+    }
+}
+
 function uuidv4() {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
         const r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
@@ -101,7 +121,7 @@ function showElement(element){
 async function typeEffect(element, speed, data, action) {
     const text = data;
     element.innerText = "";
-
+    
     let i = 0;
     const timer = await setInterval(async function() {
         if (i < text.length) {
@@ -113,7 +133,6 @@ async function typeEffect(element, speed, data, action) {
             action();
         }
     }, speed);
-    
 }
 
-showTextNode();
+startGame();
