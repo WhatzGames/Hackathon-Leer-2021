@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Threading.Tasks;
 using Covidiot.Models;
 using Covidiot.Services;
@@ -42,8 +44,15 @@ namespace Covidiot.Controllers
         public TimedNodeAction GetTimedAction(string guid) => GetExecutor(guid).NodeAction;
 
         [HttpGet("walk")]
-        public Task Walk(string guid, Direction direction) => GetExecutor(guid).Walk(direction);
-        
+        public Task Walk(string guid, string direction) => GetExecutor(guid).Walk(direction switch
+            {
+                "Nord" => Direction.North,
+                "Ost" => Direction.East,
+                "Süd" => Direction.South,
+                "West" => Direction.West,
+                _ => throw new ArgumentOutOfRangeException(nameof(direction), direction, null)
+            });
+
         [HttpGet("do")]
         public void Do(string guid, int index) => GetExecutor(guid).Do(index);
     }

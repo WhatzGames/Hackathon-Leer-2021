@@ -10,5 +10,7 @@ namespace Covidiot.Models
         public short Time { get; set; }
         [JsonPropertyName("totalScore")]
         public int TotalScore { get; set; }
+
+        public string Risc { get; set; }
     }
 }
