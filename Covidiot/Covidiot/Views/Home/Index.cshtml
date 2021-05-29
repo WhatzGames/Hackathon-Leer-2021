@@ -2,7 +2,23 @@
     ViewData["Title"] = "Covidiot";
 }
 
-<div class="container-fluid">
+<script src="https://unpkg.com/@@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+<div id="walking" class="container">
+  <div class="row">
+    <div class="col-sm">
+    </div>
+      <div class="col-sm">
+          <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_03rq8uua.json" style="width: 300px; height: 300px;"    background="transparent"  speed="1" loop autoplay></lottie-player>
+      </div>
+    <div class="col-sm">
+    </div>
+  </div>
+</div>
+
+
+
+<div id="all" class="container-fluid">
     <div id="score" class="d-flex justify-content-end">Score</div>
     <div id="time" class="d-flex justify-content-end">Time</div>
     <div id="risk" class="d-flex justify-content-end">Risiko</div>
@@ -12,7 +28,6 @@
             <div id="text" class="d-flex justify-content-center"><p>Text</p></div>
             <div id="buttons" class="btn-grid">
             </div>
-            <div id="text" class="d-flex justify-content-center">Gehe nach</div>
         </div>
     </div>
 </div>
@@ -20,7 +35,6 @@
 <br/>
 
 <div id="alertBox" class="alert alert-primary" role="alert">
-    Kuchen
 </div>
 
 

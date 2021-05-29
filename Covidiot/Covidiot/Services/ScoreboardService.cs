@@ -14,19 +14,25 @@ namespace Covidiot.Services
 
         private static async Task<ScoreBoardModel> Read() 
             => JsonSerializer.Deserialize<ScoreBoardModel>(await File.ReadAllTextAsync(ScorePath));
-
-        public async Task<Player> GetTop() 
-            => (await Read()).Players.OrderByDescending(x => x.Score).FirstOrDefault();
-
+        
         public async Task<Player[]> GetTop10()
             => (await Read()).Players.OrderByDescending(x => x.Score).Take(10).ToArray();
 
         public async Task Add(Player model)
         {
             var currentObject = await Read();
-            currentObject.Players.ToList().Add(model);
-            File.Open(ScorePath, FileMode.Open).SetLength(0);
+            var players = currentObject.Players;
+            
+            players.Add(model);
+            currentObject.Players = players;
+            
+            await using var filestream = File.Open(ScorePath, FileMode.Open);
+            
+            filestream.SetLength(0);
+            filestream.Close();
             await File.AppendAllTextAsync(ScorePath, JsonSerializer.Serialize(currentObject));
+            filestream.Close();
         }
+
     }
 }
