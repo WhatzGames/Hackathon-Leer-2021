@@ -1,8 +1,7 @@
 ﻿const textElement = document.getElementById('text');
 const scoreElement = document.getElementById('score');
 const timeElement = document.getElementById('time');
-const optionButtonsElement = document.getElementById('option-buttons');
-const directionButtonsElement = document.getElementById('direction-buttons');
+const buttonsContainer = document.getElementById('buttons');
 
 let globalData;
 
@@ -25,46 +24,49 @@ async function startGame() {
     showTextNode(data)
 }
 
-function showTextNode(gameData) {
-    const textNode = gameData;
-    textElement.innerText = textNode.description;
+function refreshGlobals(){
     scoreElement.innerText = globalData.totalScore + " Score";
     timeElement.innerText = globalData.time + " Stunden verbleibend";
-    
-    while (optionButtonsElement.firstChild) {
-        optionButtonsElement.removeChild(optionButtonsElement.firstChild)
-    }
+}
 
-    while (directionButtonsElement.firstChild) {
-        directionButtonsElement.removeChild(directionButtonsElement.firstChild)
-    }
-    
-    textNode.actions.forEach((action, index) => {
-        if (showOption(action)) {
-            createOption(action, index);
-        }
+function showTextNode(gameData) {
+    refreshGlobals();
+    textElement.innerText = gameData.description;
+    gameData.actions.forEach((action, index) => {
+        createOption(action, index);
     })
-    
-    directions.forEach(name => {
-       createDirection(name);
-    });
-    
+}
+
+function createButton(content){
+    const button = document.createElement("button");
+    button.innerText = content;
+    button.classList.add('btn');
+    return button
+}
+
+function resetButtonsContainer(){
+    buttonsContainer.innerHTML = "";
 }
 
 function createOption(action, index){
-    const button = document.createElement('button')
-    button.innerText = action.text
-    button.classList.add('btn')
-    button.addEventListener('click', () => selectOption(action, index));
-    optionButtonsElement.appendChild(button)
+    const button = createButton(action.text);
+    button.addEventListener('click', async () => {
+        resetButtonsContainer();
+        await postData(index);
+        globalData = await GetGlobalData();
+        refreshGlobals();
+        directions.forEach(direction => createDirection(direction))
+    });
+    buttonsContainer.appendChild(button);
 }
 
-function createDirection(data){
-    const button = document.createElement('button-direction')
-    button.innerText = data
-    button.classList.add('btn')
-    button.addEventListener('click', () => walkOption(data));
-    directionButtonsElement.appendChild(button)
+function createDirection(direction){
+    const button = createButton(direction)
+    button.addEventListener('click', async () => {
+        resetButtonsContainer()
+        await walkOption(direction)
+    });
+    buttonsContainer.appendChild(button);
 }
 
 async function selectOption(option, index) {
