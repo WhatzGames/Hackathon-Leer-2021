@@ -35,7 +35,21 @@ namespace Covidiot.Services
                 return;
             var action = NodeAction.Actions[index];
             TimedAction.Time -= action.Duration;
-            TimedAction.TotalScore += action.Score;
+            TimedAction.TotalScoreValue += action.Score + NodeAction.PeoplePresent * action.Probability * NodeAction.RValue;
+            if (TimedAction.TotalScoreValue <= 30)
+            {
+                TimedAction.Risc = "Hoch";
+            }
+
+            if (TimedAction.TotalScoreValue <= 20)
+            {
+                TimedAction.Risc = "Mittel";
+            }
+
+            if (TimedAction.TotalScoreValue <= 10)
+            {
+                TimedAction.Risc = "Gering";
+            }
         }
     }
 }
