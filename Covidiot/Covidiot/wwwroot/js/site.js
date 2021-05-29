@@ -3,6 +3,7 @@ const scoreElement = document.getElementById('score');
 const riskElement = document.getElementById('risk');
 const timeElement = document.getElementById('time');
 const buttonsContainer = document.getElementById('buttons');
+const buttonsContainer2 = document.getElementById('buttons2');
 const imageElement = document.getElementById('image');
 const alertElement = document.getElementById('alertBox');
 const walkElement = document.getElementById('walking');
@@ -15,13 +16,14 @@ if(id === null){
 }
 let name = {};
 
-const directions = ["Nord", "Ost", "Süd", "West"];
+const directions = ["Nord","West", "Süd", "Ost"];
+let lastActionLocationResult = undefined;
 
 async function refreshGlobals(){
     const globalData = await GetGlobalData();
     scoreElement.innerText = globalData.totalScore + " Score";
     timeElement.innerText = globalData.time + " Stunden verbleibend";
-    riskElement.innerText = "Risko: " + globalData.risk;
+    riskElement.innerText = "Risiko: " + globalData.risk;
     await endGame(globalData.time, globalData.totalScore);
 }
 
@@ -34,11 +36,12 @@ async function startGame(){
 }
 
 async function showTextNode() {
+    buttonsContainer2.innerHTML = "";
     const gameData = await GetAction();
     await refreshGlobals();
     imageElement.src = gameData.image;
     hideElement(alertElement);
-    await typeEffect(textElement, 10, gameData.description, () => {
+    await typeEffect(textElement, 5, gameData.description, () => {
         gameData.actions.forEach((action, index) => {
             createOption(action, index);
         });
@@ -57,7 +60,7 @@ function resetButtonsContainer(){
     buttonsContainer.innerHTML = "";
 }
 
-function createOption(action, index){
+function createOption(action, index) {
     const button = createButton(action.text);
     button.addEventListener('click', async () => {
         resetButtonsContainer();
@@ -65,10 +68,21 @@ function createOption(action, index){
         showElement(alertElement);
         await runAction(index);
         await refreshGlobals();
-        directions.forEach(direction => createDirection(direction))
+
+        if (lastActionLocationResult === undefined) {
+            directions.forEach(direction => createDirection(direction))
+        } else {
+            const continueButton = createButton("Weiter")
+            buttonsContainer.appendChild(continueButton);
+            continueButton.addEventListener('click', async () => {
+                resetButtonsContainer();
+                await jumpOption();
+            })
+        }
     });
     buttonsContainer.appendChild(button);
 }
+
 
 function createDirection(direction){
     const button = createButton(direction)
@@ -76,11 +90,26 @@ function createDirection(direction){
         resetButtonsContainer()
         await walkOption(direction)
     });
-    buttonsContainer.appendChild(button);
+    
+    switch (direction){
+        case "Nord":
+            buttonsContainer.appendChild(button)
+            break;
+        case "Ost":
+            buttonsContainer2.appendChild(button)
+            break;
+        case "West":
+            buttonsContainer2.appendChild(button)
+            break;
+        case "Süd":
+            buttonsContainer2.appendChild(button)
+            break;
+    }
 }
 
 async function runAction(index){
-    await fetch(`/api/Game/Do?guid=${id}&index=${index}`)
+    lastActionLocationResult = await fetch(`/api/Game/Do?guid=${id}&index=${index}`)
+        .then(response => response.ok ? response.json() : undefined)
         .catch(error => console.error(error));
 }
 
@@ -103,6 +132,12 @@ async function walkOption(data){
     hideElement(walkElement);
     showElement(allElement);
     await fetch(`api/Game/Walk?guid=${id}&direction=${data}`);
+    await showTextNode();
+}
+
+async function jumpOption() {
+    await fetch(`api/Game/jump?guid=${id}&newStart=${lastActionLocationResult.xCoordinate}${lastActionLocationResult.yCoordinate}`)
+        .catch(error => console.error(error));
     await showTextNode();
 }
 

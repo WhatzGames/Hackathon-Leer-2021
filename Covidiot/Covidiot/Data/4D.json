@@ -45,10 +45,7 @@
       "score": 0,
       "duration": 1,
       "response": "Du siehst den Bus an dir vorbeifahren.",
-      "newStart": {
-        "xCoordinate": 1,
-        "yCoordinate": "A"
-      }
+      "newStart": null
     }
   ],
   "here": {
