@@ -8,7 +8,7 @@
   "actions": [
     {
       "text": "Du belässt es dabei und verlässt den Laden.",
-      "probability": 0.01,
+      "probability": 0.1,
       "score": -1,
       "duration": 1,
       "response": "Die Apothekerin sieht aus, als wolle sie noch etwas sagen, aber du hast, was du willst und gehst raus.",
@@ -16,7 +16,7 @@
     },
     {
       "text": "Du bestellst noch Schnelltests dazu.",
-      "probability": 0.01,
+      "probability": 0.1,
       "score": -2,
       "duration": 1,
       "response": "Die Apothekerin seufzt schwer. Du verlässt den Laden und wunderst dich darüber.",
@@ -24,7 +24,7 @@
     },
     {
       "text": "Du fragst die Apothekerin, ob sie in diesen Zeiten noch andere Dinge empfehlen kann.",
-      "probability": 0.01,
+      "probability": 0.1,
       "score": 5,
       "duration": 1,
       "response": "Ihr Gesicht hellt sich wieder auf. Sie erzählt dir, dass sie ganz besondere Schirmmützen verkauft, die zwischen den Stoffschichten eine flexible Aluminiumlegierung eingearbeitet haben. Diese hält unter anderem 5G-Strahlung ab. Nach längeren Überredungskünsten ihrerseits bestellst du schließlich eine solche auf Rechnung und verlässt die Apotheke.",

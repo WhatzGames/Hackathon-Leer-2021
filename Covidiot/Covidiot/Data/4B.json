@@ -8,7 +8,7 @@
   "actions": [
     {
       "text": "Du brauchst dringend einen Jahresvorat Mehl, Dosenobst und Nudeln. Gehe in den Supermarkt und kaufe von jedem 30 Stück.",
-      "probability": 1,
+      "probability": 0.05,
       "score": 4,
       "duration": 1,
       "response": "Nachdem du letze Woche schon das ganze Klopapier gekauft hast bist du jetzt bereit für jede Quarantäne!",
@@ -16,7 +16,7 @@
     },
     {
       "text": "Leck am Griff vom Einlaufswagen.",
-      "probability": 1,
+      "probability": 0.1,
       "score": 7,
       "duration": 1,
       "response": "Du hast jetzt bestimmt Corona. Und alles andere auch.",
@@ -24,7 +24,7 @@
     },
     {
       "text": "Mach ganz normal deinen Wocheneinkauf.",
-      "probability": 1,
+      "probability": 0,
       "score": -2,
       "duration": 1,
       "response": "Du ergatterst das allerletzte Paket Klopapier. Auf dem Parkplatz teilst du es mit einer alten Dame.",

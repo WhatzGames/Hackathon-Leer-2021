@@ -8,8 +8,8 @@
   "actions": [
     {
       "text": "Du rennst (natürlich ohne Maske) in die Menge und umarmst jeden, den Du kennst.",
-      "probability": 0.5,
-      "score": 6,
+      "probability": 0.1,
+      "score": 10,
       "duration": 1,
       "response": "Nach zahlreichen Umarmungen und auch Küssen ist Dein Gesicht total vollgesabbert.",
       "newStart": null
@@ -17,7 +17,7 @@
     {
       "text": "Du rufst die Polizei an und berichtest von dieser unangemeldeten Versammlung verdächtiger Individuen.",
       "probability": 0,
-      "score": -3,
+      "score": -5,
       "duration": 1,
       "response": "Die Polizei kommt und löst die Hochzeitsveranstaltung auf.\n Du erhaschst noch einen bösen Blick von Deiner Arbeitskollegin - schätze das wird noch ein Nachspiel haben.",
       "newStart": null

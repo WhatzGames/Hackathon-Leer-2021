@@ -1,6 +1,6 @@
 ﻿{
-  "description": "Du bist zu Hause. Es ist ein neuer Tag im Pandemiezeitalter. Corona ist im vollem Gange, die Regierung hat Maßnahmen ergriffen. Du selbst bist mitten drin. Und stehst dem ganzen mindestens skeptisch gegenüber. \nDu darfst diesen Tag in 24 Stunden gestalten, hingehen, wohin du willst, und erleben. Sei ein guter Covidiot, oder lass den gesunden Menschenverstand spielen. Deine Entscheidung.\nDu kannst jetzt ganz einfach loslegen. Geh sofort raus, oder tu etwas anderes. Viel Spaß dabei!",
-  "image": "https://img.posterlounge.de/images/big/1870155.jpg",
+  "description": "Du bist zu Hause. Es ist ein neuer Tag im Pandemiezeitalter. Corona ist im vollem Gange, die Regierung hat Maßnahmen ergriffen. Du selbst bist mitten drin. Und stehst dem ganzen mindestens skeptisch gegenüber. \n Du darfst diesen Tag in 24 Stunden gestalten, hingehen, wohin du willst, und erleben. Sei ein guter Covidiot, oder lass den gesunden Menschenverstand spielen. Deine Entscheidung.\n Du kannst jetzt ganz einfach loslegen. Geh sofort raus, oder tu etwas anderes. Viel Spaß dabei!",
+  "image": "https://www.massive-wohnbau.de/files/images_immo/einfamilienhaus/efh_helena/einfamilienhaus_helena.jpg",
   "peoplePresent": 1,
   "rValue": 0.0,
   "timeOfDayStart": 0,
@@ -8,7 +8,7 @@
   "actions": [
     {
       "text": "Du gehst raus und startest einfach in den Tag.",
-      "probability": 1,
+      "probability": 0,
       "score": 0,
       "duration": 0,
       "response": "Ohne Plan wählst du nun die Richtung, in die es gehen soll.",
@@ -16,17 +16,17 @@
     },
     {
       "text": "Chatte mit Freunden und frage, was abgeht.",
-      "probability": 1,
+      "probability": 0,
       "score": 0,
-      "duration": 2,
+      "duration": 1,
       "response": "Du erfährst, dass es heute ein Event steigen soll. Der genaue Ort ist nicht bekannt, aber er soll nördlich liegen.",
       "newStart": null
     },
     {
       "text": "Frage deine Kollegen, wie es ihnen geht.",
-      "probability": 1,
+      "probability": 0,
       "score": 0,
-      "duration": 2,
+      "duration": 1,
       "response": "Dabei wirst du dran erinnert, dass einer deiner Kolleginnen heute heiraten soll. Du und deine Kollegen seid nicht offiziell eingeladen, aber ihr versteht euch und sie hätte sicher nichts dagegen, wenn du ihr persönlich gratulierst. Die Hochzeit soll im großen Gasthaus im Westen stattfinden.",
       "newStart": null
     }

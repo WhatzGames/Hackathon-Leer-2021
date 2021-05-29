@@ -1,5 +1,5 @@
 {
-  "description": "Wow! Überall strömen Menschen auf dem Gelände in ein etwas schäbig anmutendes Gebäude, das von vielen bunten Lichtern erleuchtet wird. \n In grellen Farbtönen ist RAVE PARTY hastig über die Eingangstür gesprüht worden.\n Es scheint sich um eine illegale Corona Party zu handeln!",
+  "description": "Wow! Überall strömen Menschen auf das Gelände und in ein etwas schäbig anmutendes Gebäude, das von vielen bunten Lichtern erleuchtet wird. \n In grellen Farbtönen ist RAVE PARTY hastig über die Eingangstür gesprüht worden.\n Es scheint sich um eine illegale Corona Party zu handeln!",
   "image": "https://static.euronews.com/articles/stories/05/24/39/04/1440x810_cmsv2_938f624b-3edb-5d12-8f38-f6e39037e4f2-5243904.jpg",
   "peoplePresent": 80,
   "rValue": 3.2,
@@ -8,26 +8,26 @@
   "actions": [
     {
       "text": "Rufe per Handy die Polizei an. ",
-      "probability": 1,
+      "probability": 0,
       "score": -3,
       "duration": 1,
-      "response": "Du weißt Du hast das richtige getan.",
+      "response": "Du weißt Du hast das Richtige getan.",
       "newStart": null
     },
     {
-      "text": "Nehme die Maske ab und auf ins Getümmel. Erstmal tanzen und Freunde treffen..",
-      "probability": 1,
+      "text": "Nehme die Maske ab und auf ins Getümmel. Erstmal tanzen und Freunde treffen.",
+      "probability": 0.2,
       "score": 10,
       "duration": 7,
-      "response": "Nach 7 Stunden hat Du alles gegeben und viele Freunde kennengelernt und umarmt. Viele haben sogar gehustet!",
+      "response": "Nach 7 Stunden hast Du alles gegeben und viele Freunde kennengelernt und umarmt. Viele haben sogar gehustet!",
       "newStart": null
     },
     {
-      "text": "Rede kurz mit einem Bekannten in der Raucherecke aber halte Abstand und die Maske auf.",
-      "probability": 1,
+      "text": "Rede kurz mit einem Bekannten in der Raucherecke, aber halte Abstand und die Maske auf.",
+      "probability": 0.02,
       "score": 1,
       "duration": 1,
-      "response": "Nach ein paar Minuten passiv rauchen geht es Dir schon viel schlechter, aber wenigsten ist das Corona Risiko minimiert..",
+      "response": "Nach ein paar Minuten passiv Rauchen geht es Dir schon viel schlechter, aber wenigsten ist das Corona Risiko minimiert.",
       "newStart": null
     }
   ],

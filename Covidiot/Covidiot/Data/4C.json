@@ -8,7 +8,7 @@
   "actions": [
     {
       "text": "Schon lange hast du auf deinen Termin gewartet, heute ist es endlich so weit: Lass dich impfen!",
-      "probability": 1,
+      "probability": 0,
       "score": -10,
       "duration": 1,
       "response": "One step closer to Herdenimmunität!",
@@ -16,7 +16,7 @@
     },
     {
       "text": "Versuch dich ins Impfzentrum zu schleichen, vielleicht kannst du ja ein paar Dosen Impfstoff stehlen.",
-      "probability": 1,
+      "probability": 0,
       "score": -10,
       "duration": 1,
       "response": "Du schleichst dich erfolgreich ins Impfzentrum! Du schlenderst in ein Behandlungszimmer, um nach Impfstoff zu suchen. /n Doch ehe du dich versiehst, hast du eine Spritze im Arm. Die Ärztin lächelt dich freundlich an, aber du merkst schon, wie du langsam Autism und 5G bekommst.",
@@ -24,7 +24,7 @@
     },
     {
       "text": "Versuche die Leute, die ins Impfzentrum wollen, zu überzeugen wieder zu gehen.",
-      "probability": 1,
+      "probability": 0,
       "score": 1,
       "duration": 3,
       "response": "Irgendwie will keiner auf dich hören. Mehrere Leute haben dir sogar einen Vogel gezeigt!",

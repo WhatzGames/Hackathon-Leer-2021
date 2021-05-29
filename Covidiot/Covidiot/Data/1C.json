@@ -8,7 +8,7 @@
   "actions": [
     {
       "text": "Setz dich dazu und erzähl von deinem Tag.",
-      "probability": 0.3,
+      "probability": 0.4,
       "score": 2,
       "duration": 3,
       "response": "Erst finden die Jugendlichen dich etwas komisch, aber mit der Zeit tauen sie auf. Du sitzt zwei Stunden mit ihnen an der Haltestelle bevor du endlich deinen Bus nimmst.",

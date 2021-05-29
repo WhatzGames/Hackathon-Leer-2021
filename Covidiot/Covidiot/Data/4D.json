@@ -8,7 +8,7 @@
   "actions": [
     {
       "text": "Du setzt deine Maske auf und setzt dich. Während der Fahrt behälst du sie auf.",
-      "probability": 1,
+      "probability": 0,
       "score": -1,
       "duration": 2,
       "response": "Die Fahrt verläuft ruhig, du erreichst die Zielhaltestelle zeitig.",
@@ -19,7 +19,7 @@
     },
     {
       "text": "Du setzt deine Maske zunächst auf. Sobald der Bus losfährt, ziehst du sie unter die Nase.",
-      "probability": 1,
+      "probability": 0.2,
       "score": 3,
       "duration": 3,
       "response": "Während der Fahrt sieht dich der Busfahrer mit deiner schlecht sitzenden Maske. Er hält an und diskutiert mit dir über die Sinnhaftigkeit der Masken, schließlich setzt du sie wieder richtig auf, du willst ja irgendwann am Ziel ankommen.",
@@ -30,7 +30,7 @@
     },
     {
       "text": "Du steigst in den Bus ein und setzt sie dann ab.",
-      "probability": 1,
+      "probability": 0.3,
       "score": 8,
       "duration": 7,
       "response": "Dein Verhalten stößt dem Fahrer und Mitfahrern sehr sauer auf. Ihr diskutiert hitzig, Du willst schließlich auch nicht wieder aussteigen. Letztlich ruft der Fahrer die Polizei wegen deines Verhaltens. Da du das Bußgeld nicht bezahlen kannst, nimmt sie dich mit auf die Wache. Das kann dauern...",
@@ -40,11 +40,11 @@
       }
     },
     {
-      "text": "Du wartest doch nicht, sondern gehst einfach weiter",
-      "probability": 1,
+      "text": "Du wartest doch nicht, sondern gehst einfach weiter.",
+      "probability": 0,
       "score": 0,
       "duration": 1,
-      "response": "Du siehst den Bus an dir vorbeifahren-",
+      "response": "Du siehst den Bus an dir vorbeifahren.",
       "newStart": {
         "xCoordinate": 1,
         "yCoordinate": "A"
