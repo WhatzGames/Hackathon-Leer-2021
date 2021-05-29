@@ -11,6 +11,7 @@ const id = uuidv4();
 let name = {};
 
 const directions = ["Nord", "Ost", "Süd", "West"];
+let lastActionLocationResult = undefined;
 
 async function refreshGlobals(){
     const globalData = await GetGlobalData();
@@ -32,7 +33,7 @@ async function showTextNode() {
     await refreshGlobals();
     imageElement.src = gameData.image;
     hideElement(alertElement);
-    await typeEffect(textElement, 10, gameData.description, () => {
+    await typeEffect(textElement, 5, gameData.description, () => {
         gameData.actions.forEach((action, index) => {
             createOption(action, index);
         });
@@ -51,7 +52,7 @@ function resetButtonsContainer(){
     buttonsContainer.innerHTML = "";
 }
 
-function createOption(action, index){
+function createOption(action, index) {
     const button = createButton(action.text);
     button.addEventListener('click', async () => {
         resetButtonsContainer();
@@ -59,10 +60,21 @@ function createOption(action, index){
         showElement(alertElement);
         await runAction(index);
         await refreshGlobals();
-        directions.forEach(direction => createDirection(direction))
+
+        if (lastActionLocationResult === undefined) {
+            directions.forEach(direction => createDirection(direction))
+        } else {
+            const continueButton = createButton("Weiter")
+            buttonsContainer.appendChild(continueButton);
+            continueButton.addEventListener('click', async () => {
+                resetButtonsContainer();
+                await jumpOption();
+            })
+        }
     });
     buttonsContainer.appendChild(button);
 }
+
 
 function createDirection(direction){
     const button = createButton(direction)
@@ -74,7 +86,8 @@ function createDirection(direction){
 }
 
 async function runAction(index){
-    await fetch(`/api/Game/Do?guid=${id}&index=${index}`)
+    lastActionLocationResult = await fetch(`/api/Game/Do?guid=${id}&index=${index}`)
+        .then(response => response.ok ? response.json() : undefined)
         .catch(error => console.error(error));
 }
 
@@ -97,6 +110,12 @@ async function walkOption(data){
     hideElement(walkElement);
     showElement(allElement);
     await fetch(`api/Game/Walk?guid=${id}&direction=${data}`);
+    await showTextNode();
+}
+
+async function jumpOption() {
+    await fetch(`api/Game/jump?guid=${id}&newStart=${lastActionLocationResult.xCoordinate}${lastActionLocationResult.yCoordinate}`)
+        .catch(error => console.error(error));
     await showTextNode();
 }
 

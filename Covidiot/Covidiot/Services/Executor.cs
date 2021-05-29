@@ -29,13 +29,18 @@ namespace Covidiot.Services
                 _ => throw new ArgumentOutOfRangeException(nameof(direction), direction, null)
             });
 
-        public void Do(int index)
+        public MapNodeCoordinate Do(int index)
         {
             if (index >= NodeAction.Actions.Length)
-                return;
+                return null;
             var action = NodeAction.Actions[index];
             TimedAction.Time -= action.Duration;
             TimedAction.TotalScore += action.Score;
+            return action.NewStart;
         }
+        
+        
+        public async Task Jump(string newStart) => 
+            NodeAction = await JsonReadService.ReadAction(newStart);
     }
 }
