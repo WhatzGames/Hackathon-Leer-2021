@@ -12,10 +12,7 @@
       "score": 1,
       "duration": 1,
       "response": "Áuf dem Blatt steht folgender Text: \"Hochzeit:WSW\". Der Zettel und jetzt auch deine Hand fühlt sich etwas abgegrabbelt an.",
-      "newStart": {
-        "xCoordinate": 1,
-        "yCoordinate": "A"
-      }
+      "newStart": null
     },
     {
       "text": "Du wirfst den Zettel in den nächsten Müllkorb und desinfizierst erstmal Deine Hände",
